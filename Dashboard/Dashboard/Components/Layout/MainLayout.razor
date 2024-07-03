@@ -1,0 +1,76 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="MyCustomTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="DrawerToggle" />
+        <MudButton Href="/">
+            <MudImage Src="images/zaner-ag-hedge-logo.svg" Width="100" Class="mt-1" />
+        </MudButton>
+        <MudSpacer />
+        <MudText Typo="Typo.h5" Class="ml-5">ZANER USDA Quickstats Customization</MudText>
+        <MudSpacer />
+        @* <MudSwitch @bind-Checked="@_isDarkMode" Color="MudBlazor.Color.Primary" Class="ma-1" T="bool" ThumbIcon="@Icons.Material.Filled.DarkMode" /> *@
+        <MudToggleIconButton @bind-Toggled="@_isDarkMode" 
+            Icon="@Icons.Material.Filled.DarkMode" Color="@Color.Default" 
+            ToggledIcon="@Icons.Material.Filled.WbSunny" ToggledColor="@Color.Default"/>
+        <MudText Class="mr-3">Welcome User Adam Smith</MudText>
+
+        <MudBadge Color="MudBlazor.Color.Success" Overlap="true" Bordered="true" Class="mt-2">
+            <MudAvatar Class="">
+                <MudImage Src="images/Adam_Smith_The_Muir_portrait.jpg"></MudImage>
+            </MudAvatar>
+        </MudBadge>
+        @* <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" /> *@
+        <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+            <MudMenuItem>My account</MudMenuItem>
+            <MudMenuItem>Barracks</MudMenuItem>
+            <MudMenuItem>Log Out</MudMenuItem>
+        </MudMenu>
+    </MudAppBar>
+    <MudDrawer @bind-Open="@_drawerOpen" Elevation="25" Anchor="Anchor.Left">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">Application</MudText>
+        </MudDrawerHeader>
+        <MudDrawerContainer>
+            <NavMenu />
+        </MudDrawerContainer>
+    </MudDrawer>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = true;
+    private bool _isDarkMode;
+    private MudTheme _theme = new();
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    MudTheme MyCustomTheme = new MudTheme()
+        {
+            PaletteLight = new PaletteLight()
+            {
+                Primary = Colors.Blue.Default,
+                Secondary = Colors.Green.Accent4,
+                AppbarBackground = Colors.Red.Default,
+            },
+            PaletteDark = new PaletteDark()
+            {
+                Primary = Colors.Blue.Lighten1
+            },
+
+            LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px"
+            }
+        };
+}
