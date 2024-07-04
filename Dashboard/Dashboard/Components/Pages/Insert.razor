@@ -1,0 +1,66 @@
+﻿@page "/insert"
+@rendermode InteractiveServer
+
+@using Dashboard.Models
+@using Dashboard.Data
+@using Dashboard.Services
+@inject DataContext dataContext
+@inject EmployeeService employeeService
+
+<MudContainer>
+<h3>Live Data</h3>
+@foreach(var emp in EmployeesList)
+{
+    <p>@emp.Name | @emp.Title</p>
+}
+
+@* @if(ProductList is not null)
+{
+    <MudText>@ProductList.FirstOrDefault().Name</MudText>
+}
+else
+{
+    <MudButton OnClick="GetProducts"></MudButton>
+} *@
+
+<EditForm Model="@product" OnValidSubmit="OnValidSubmit">
+    <MudGrid>
+        <MudItem>
+            <MudTextField Label="Name" @bind-Value="@product.Name" />
+            <MudTextField Label="Price" @bind-Value="@product.Price" />
+            <MudTextField Label="Year" @bind-Value="@product.Year" />
+            <MudCheckBox @bind-Value="@product.Available" />
+
+            <MudButton ButtonType="ButtonType.Submit">Insert</MudButton>
+        </MudItem>
+    </MudGrid>
+    
+</EditForm>
+</MudContainer>
+
+@code {
+    Product product = new Product();
+    private List<Product> ProductList = new List<Product>();
+    private List<Employee> EmployeesList = new List<Employee>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        EmployeesList = await employeeService.GetAllEmployees();
+    }
+
+    private async Task OnValidSubmit()
+    {
+        dataContext.Products.Add(product);
+        await dataContext.SaveChangesAsync();
+    }
+
+    // private async Task<List<Product>> GetProducts()
+    // {
+    //     var tempProducts = await dataContext.Products.ToList();
+    //     if(tempProducts != null)
+    //     {
+    //         ProductList = tempProducts;
+    //     }
+        
+    // }
+}

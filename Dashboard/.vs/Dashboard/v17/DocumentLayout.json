@@ -7,20 +7,36 @@
       "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\pages\\insert.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\pages\\insert.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\pages\\data.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\pages\\data.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\dashboard.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\dashboard.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,20 +50,11 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Dashboard\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Dashboard\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-03T19:43:27.496Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -57,9 +64,48 @@
               "RelativeDocumentMoniker": "Dashboard\\Components\\Layout\\MainLayout.razor",
               "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Layout\\MainLayout.razor",
               "RelativeToolTip": "Dashboard\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AQIAACwAAAAAAAAAAAAIwEkAAAANAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-03T19:35:25.504Z",
+              "WhenOpened": "2024-07-04T02:05:26.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\appsettings.json",
+              "RelativeDocumentMoniker": "Dashboard\\appsettings.json",
+              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\appsettings.json",
+              "RelativeToolTip": "Dashboard\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAACHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-04T01:45:01.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard",
+              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Dashboard.csproj",
+              "RelativeDocumentMoniker": "Dashboard\\Dashboard.csproj",
+              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Dashboard.csproj",
+              "RelativeToolTip": "Dashboard\\Dashboard.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-04T01:43:25.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Data.razor",
+              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Pages\\Data.razor",
+              "RelativeDocumentMoniker": "Dashboard\\Components\\Pages\\Data.razor",
+              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Pages\\Data.razor",
+              "RelativeToolTip": "Dashboard\\Components\\Pages\\Data.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T01:43:01.799Z",
               "EditorCaption": ""
             },
             {
@@ -70,35 +116,61 @@
               "RelativeDocumentMoniker": "Dashboard\\Program.cs",
               "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Program.cs",
               "RelativeToolTip": "Dashboard\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T19:34:17.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\App.razor",
-              "RelativeDocumentMoniker": "Dashboard\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\App.razor",
-              "RelativeToolTip": "Dashboard\\Components\\App.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-03T19:30:14.435Z",
+              "WhenOpened": "2024-07-04T01:31:58.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "Dashboard\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\_Imports.razor",
-              "RelativeToolTip": "Dashboard\\Components\\_Imports.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Dashboard\\Services\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Dashboard\\Services\\EmployeeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T01:26:13.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Insert.razor",
+              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Pages\\Insert.razor",
+              "RelativeDocumentMoniker": "Dashboard\\Components\\Pages\\Insert.razor",
+              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Pages\\Insert.razor",
+              "RelativeToolTip": "Dashboard\\Components\\Pages\\Insert.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-03T19:29:57.779Z",
+              "WhenOpened": "2024-07-04T00:41:07.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Dashboard\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Data\\DataContext.cs",
+              "RelativeToolTip": "Dashboard\\Data\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T21:15:32.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Dashboard\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Dashboard\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T21:12:51.237Z",
               "EditorCaption": ""
             }
           ]

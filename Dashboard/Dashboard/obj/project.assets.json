@@ -46,6 +46,29 @@
           }
         }
       },
+      "Blazor-ApexCharts/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "8.0.2",
+          "Microsoft.AspNetCore.Components.Web": "8.0.2"
+        },
+        "compile": {
+          "lib/net8.0/Blazor-ApexCharts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Blazor-ApexCharts.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Blazor-ApexCharts.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazor-ApexCharts.props": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1808,6 +1831,33 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Blazor-ApexCharts/3.3.0": {
+      "sha512": "fVvNIgC7IDtkKnwY7RhTYJ4kFrfqxxI3CuxU9x6NpI/xACRJSRWPDoeMWSgzGN4++HwdWLtzHEZzDXa873lBUA==",
+      "type": "package",
+      "path": "blazor-apexcharts/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "apexchart_logo.png",
+        "blazor-apexcharts.3.3.0.nupkg.sha512",
+        "blazor-apexcharts.nuspec",
+        "build/Blazor-ApexCharts.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazor-ApexCharts.props",
+        "buildTransitive/Blazor-ApexCharts.props",
+        "lib/net6.0/Blazor-ApexCharts.dll",
+        "lib/net6.0/Blazor-ApexCharts.xml",
+        "lib/net7.0/Blazor-ApexCharts.dll",
+        "lib/net7.0/Blazor-ApexCharts.xml",
+        "lib/net8.0/Blazor-ApexCharts.dll",
+        "lib/net8.0/Blazor-ApexCharts.xml",
+        "staticwebassets/css/apexcharts.css",
+        "staticwebassets/js/apexcharts.esm.js",
+        "staticwebassets/js/blazor-apexcharts.js"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4650,6 +4700,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Blazor-ApexCharts >= 3.3.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
@@ -4702,6 +4753,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Blazor-ApexCharts": {
+            "target": "Package",
+            "version": "[3.3.0, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.6, )"

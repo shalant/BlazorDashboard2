@@ -8,6 +8,7 @@ C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\n
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\net8.0\Dashboard.pdb
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\net8.0\Blazor-ApexCharts.dll
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\net8.0\Humanizer.dll
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
@@ -134,6 +135,7 @@ C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\n
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\net8.0\Dashboard.AssemblyInfo.cs
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\net8.0\Dashboard.csproj.CoreCompileInputs.cache
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\net8.0\Dashboard.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\net8.0\Dashboard.sourcelink.json
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\digdr\Documents\coding\BlazorDashboard2\Dashboard\Dashboard\obj\Debug\net8.0\staticwebassets\msbuild.Dashboard.Microsoft.AspNetCore.StaticWebAssets.props

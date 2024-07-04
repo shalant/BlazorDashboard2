@@ -1,6 +1,7 @@
 using Dashboard.Components;
 using Dashboard.Components.Account;
 using Dashboard.Data;
+using Dashboard.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<DataContext>();
+builder.Services.AddSingleton<EmployeeService>();
 
 builder.Services.AddMudServices();
 
@@ -32,8 +36,12 @@ builder.Services.AddAuthentication(options =>
 	.AddIdentityCookies();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var dataConnectionString = builder.Configuration.GetConnectionString("DatabaseConnectionString") ?? throw new InvalidOperationException("Connection string 'DatabaseConnectionString' not found.");
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<DataContext>(options =>
+	options.UseSqlServer(dataConnectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
