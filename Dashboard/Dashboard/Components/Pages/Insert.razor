@@ -6,6 +6,7 @@
 @using Dashboard.Services
 @inject DataContext dataContext
 @inject EmployeeService employeeService
+@inject ProductService productService
 
 <MudContainer>
 <h3>Live Data</h3>
@@ -23,6 +24,11 @@ else
     <MudButton OnClick="GetProducts"></MudButton>
 } *@
 
+    @foreach(var prod in ProductList)
+    {
+        <p>@prod.Name | @prod.Price</p>
+    }
+
 <EditForm Model="@product" OnValidSubmit="OnValidSubmit">
     <MudGrid>
         <MudItem>
@@ -31,7 +37,7 @@ else
             <MudTextField Label="Year" @bind-Value="@product.Year" />
             <MudCheckBox @bind-Value="@product.Available" />
 
-            <MudButton ButtonType="ButtonType.Submit">Insert</MudButton>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Insert</MudButton>
         </MudItem>
     </MudGrid>
     
@@ -45,6 +51,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        ProductList = await productService.GetAllProducts();
         EmployeesList = await employeeService.GetAllEmployees();
     }
 
@@ -64,3 +71,7 @@ else
         
     // }
 }
+
+
+
+

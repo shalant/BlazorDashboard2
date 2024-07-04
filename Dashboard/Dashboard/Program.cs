@@ -15,6 +15,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddSingleton<DataContext>();
 builder.Services.AddSingleton<EmployeeService>();
+builder.Services.AddSingleton<ProductService>();
 
 builder.Services.AddMudServices();
 
