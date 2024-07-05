@@ -6,17 +6,57 @@
         <div class="content-layer">
             <MudGrid>
                 <MudItem xs="12" sm="6" md="4">
-                    <MudPaper Elevation="8" Class="pa-4" Style="height: 200px;" >
+                    <MudCard Class="custom-card" Elevation="8">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">S & P Health Care Services Select Industry Index</MudText>
+                            </CardHeaderContent>
+                            <CardHeaderActions>
+                                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="MudBlazor.Color.Default" />
+                            </CardHeaderActions>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudText>13,444.26</MudText>
+                            <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Tertiary" Class="mt-2">
+                                <MudIcon Color="MudBlazor.Color.Tertiary" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                0.90%
+                            </MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary">Read More</MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                    @* <MudPaper Elevation="8" Class="pa-4" Style="height: 200px;" >
                         <MudText Align="MudBlazor.Align.Left" Typo="Typo.body1" Class="mt-4">S & P Health Care Services Select Industry Index</MudText>
                         <MudText Typo="Typo.body2">34,234</MudText>
                         <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
                             <MudIcon Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward"></MudIcon>
                             1.2%
                         </MudText>
-                    </MudPaper>
+                    </MudPaper> *@
                 </MudItem>
                 <MudItem xs="12" sm="6" md="4">
-                    <MudPaper Elevation="8" Class="pa-4" Style="height: 200px;">
+                    <MudCard Class="custom-card" Elevation="8">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">S & P RavenPack AI Index</MudText>
+                            </CardHeaderContent>
+                            <CardHeaderActions>
+                                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="MudBlazor.Color.Default" />
+                            </CardHeaderActions>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudText>242.19</MudText>
+                            <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
+                                <MudIcon Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward"></MudIcon>
+                                1.46%
+                            </MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary">Read More</MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                    @* <MudPaper Elevation="8" Class="pa-4 custom-card" Style="height: 200px;">
                         <MudText Align="MudBlazor.Align.Left" Typo="Typo.body1" Class="mt-4">S & P RavenPack AI Index</MudText>
                         <MudText Typo="Typo.body2">4,987</MudText>
 
@@ -24,13 +64,13 @@
                             <MudIcon Color="MudBlazor.Color.Tertiary" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
                             2.2%
                         </MudText>
-                    </MudPaper>
+                    </MudPaper> *@
                 </MudItem>
-                <MudItem xs="12" sm="12" md="4">
-                    <MudCard>
+                <MudItem xs="12" sm="6" md="4">
+                    <MudCard Class="custom-card" Elevation="8">
                     <MudCardHeader>
                         <CardHeaderContent>
-                            <MudText Typo="Typo.h6">Dow Jones</MudText>
+                                <MudText Typo="Typo.body1">Dow Jones</MudText>
                         </CardHeaderContent>
                         <CardHeaderActions>
                             <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="MudBlazor.Color.Default" />

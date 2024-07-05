@@ -7,6 +7,7 @@
 @inject DataContext dataContext
 @inject EmployeeService employeeService
 @inject ProductService productService
+@inject AiUsageService aiUsageService
 
 <MudContainer>
 <h3>Live Data</h3>
@@ -29,35 +30,60 @@ else
         <p>@prod.Name | @prod.Price</p>
     }
 
+        <MudGrid>
+            <MudItem xs="12" sm="6">
+
+<MudText>Product Info</MudText>
 <EditForm Model="@product" OnValidSubmit="OnValidSubmit">
-    <MudGrid>
-        <MudItem>
+    
             <MudTextField Label="Name" @bind-Value="@product.Name" />
             <MudTextField Label="Price" @bind-Value="@product.Price" />
             <MudTextField Label="Year" @bind-Value="@product.Year" />
             <MudCheckBox @bind-Value="@product.Available" />
 
             <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Insert</MudButton>
-        </MudItem>
-    </MudGrid>
     
 </EditForm>
+            </MudItem>
+
+        <MudItem xs="12" sm="6">
+        <MudText>State AI Usage Info</MudText>
+        <EditForm Model="@aiUsage" OnValidSubmit="OnValidSubmitAi">
+                <MudItem>
+                    <MudTextField Label="StateName" @bind-Value="@aiUsage.StateName" />
+                    <MudTextField Label="Usage" @bind-Value="@aiUsage.Usage" />
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Insert</MudButton>
+                </MudItem>
+
+        </EditForm>
+</MudItem>
+        </MudGrid>
+
 </MudContainer>
 
 @code {
     Product product = new Product();
+    AiUsage aiUsage = new AiUsage();
     private List<Product> ProductList = new List<Product>();
     private List<Employee> EmployeesList = new List<Employee>();
+    private List<AiUsage> AiUsageList = new List<AiUsage>();
 
     protected override async Task OnInitializedAsync()
     {
         ProductList = await productService.GetAllProducts();
         EmployeesList = await employeeService.GetAllEmployees();
+        AiUsageList = await aiUsageService.GetAllAiUsage();
     }
 
     private async Task OnValidSubmit()
     {
         dataContext.Products.Add(product);
+        await dataContext.SaveChangesAsync();
+    }
+    
+    private async Task OnValidSubmitAi()
+    {
+        dataContext.AiUsages.Add(aiUsage);
         await dataContext.SaveChangesAsync();
     }
 

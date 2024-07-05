@@ -34,7 +34,7 @@
         @* <MudDrawerHeader>
             <MudText Typo="Typo.h6">Application</MudText>
         </MudDrawerHeader> *@
-        <MudDrawerContainer Class="mt-3">
+        <MudDrawerContainer Class="mt-1">
             <NavMenu />
         </MudDrawerContainer>
     </MudDrawer>
@@ -60,6 +60,7 @@
                 Primary = Colors.Blue.Default,
                 Secondary = Colors.Green.Accent4,
                 Tertiary = Colors.Red.Accent4,
+                TertiaryLighten = Colors.Orange.Accent2,
                 AppbarBackground = "rgba(0,98,138,1)",
                 DrawerBackground = "rgba(16,110,149,1)",
                 
@@ -70,7 +71,9 @@
                 Secondary = Colors.Green.Accent4,
                 Tertiary = Colors.Red.Accent4,
                 AppbarBackground = Colors.Gray.Darken3,
-                DrawerBackground = "rgba(240,240,240,0.7)"
+                DrawerBackground = Colors.Gray.Darken1,
+                Background = Colors.Gray.Lighten1,
+                
             },
 
             LayoutProperties = new LayoutProperties()
