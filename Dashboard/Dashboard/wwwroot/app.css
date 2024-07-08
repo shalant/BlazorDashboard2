@@ -51,9 +51,18 @@ h1:focus {
 }
 
 .nav-header {
-    color: orange !important;
+    color: rgb(246,141,46) !important;
 }
 
 .custom-card:hover {
     transform:scale(1.01) !important;
+}
+
+.custom-state {
+    color: rgba(129, 133, 137, 0.9)
+}
+
+path:hover {
+    fill: rgba(129, 133, 144, 0.9)
+    
 }

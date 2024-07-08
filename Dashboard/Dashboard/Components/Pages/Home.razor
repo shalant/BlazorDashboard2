@@ -1,7 +1,7 @@
 ﻿@page "/"
 @rendermode InteractiveServer
 
-<MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
+<MudContainer Class="mt-12 px-8" MaxWidth="MaxWidth.False">
     <div class="wrap-layer">
         <div class="content-layer">
             <MudGrid>
@@ -100,16 +100,18 @@
                             <ApexPointSeries TItem="MyData"
                                              Items="Data2"
                                              Name="Net Profit"
-                                             SeriesType="SeriesType.Line"
+                                             SeriesType="SeriesType.Bar"
                                              XValue="e => e.Category"
-                                             YValue="e=> e.NetProfit" />
+                                             YValue="e=> e.NetProfit" 
+                                             Color="rgb(246,141,46)" />
 
                             <ApexPointSeries TItem="MyData"
                                              Items="Data2"
                                              Name="Revenue"
-                                             SeriesType="SeriesType.Line"
+                                             SeriesType="SeriesType.Bar"
                                              XValue="e => e.Category"
-                                             YValue="e=> e.Revenue" />
+                                             YValue="e=> e.Revenue"
+                                             Color="#E51C15"  />
                         </ApexChart>
                     </MudPaper>
                 </MudItem>
@@ -801,6 +803,8 @@
         Data2.Add(new MyData { Category = "Apr", NetProfit = 52, Revenue = 83 });
         Data2.Add(new MyData { Category = "May", NetProfit = 42, Revenue = 42 });
         Data2.Add(new MyData { Category = "Jun", NetProfit = 72, Revenue = 113 });
+        Data2.Add(new MyData { Category = "Jul", NetProfit = 82, Revenue = 123 });
+        Data2.Add(new MyData { Category = "Aug", NetProfit = 92, Revenue = 143 });
     }
 
     public class MyData

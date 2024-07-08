@@ -3,11 +3,11 @@
 
 <MudNavMenu>
     <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.OtherHouses">Home</MudNavLink>
-    <MudNavLink Href="/counter" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Calculate">Counter</MudNavLink>
-    <MudNavLink Href="/weather" Match="NavLinkMatch.All">Weather</MudNavLink>
-    <MudNavLink Href="/data" Match="NavLinkMatch.All">Data</MudNavLink>
-    <MudNavLink Href="/insert" Match="NavLinkMatch.All">Insert</MudNavLink>
-    <MudNavLink Href="/auth" Match="NavLinkMatch.All">Auth Required</MudNavLink>
+    @* <MudNavLink Href="/counter" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Calculate">Counter</MudNavLink> *@
+    @* <MudNavLink Href="/weather" Match="NavLinkMatch.All">Weather</MudNavLink> *@
+    <MudNavLink Href="/data" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Map">Data</MudNavLink>
+    <MudNavLink Href="/insert" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Edit">Insert</MudNavLink>
+    <MudNavLink Href="/auth" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Person">Auth Required</MudNavLink>
     <AuthorizeView>
         <Authorized>
             <div class="nav-item px-3">
