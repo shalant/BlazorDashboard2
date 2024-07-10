@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\images\\Adam_Smith_The_Muir_portrait.jpg"
     },
     {
+      "Id": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\images\\randomLogo.jpg",
+      "PackagePath": "staticwebassets\\images\\randomLogo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\images\\reshot.svg",
+      "PackagePath": "staticwebassets\\images\\reshot.svg"
+    },
+    {
       "Id": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\images\\tackle_logo.svg",
       "PackagePath": "staticwebassets\\images\\tackle_logo.svg"
     },
