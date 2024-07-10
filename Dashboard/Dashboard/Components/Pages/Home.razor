@@ -1,5 +1,9 @@
 ﻿@page "/"
 @rendermode InteractiveServer
+@using System.Net.Http.Headers;
+@using Dashboard.Models
+@using System.Net.Http.Json
+@using System.Text.Json
 
 <MudContainer Class="mt-12 px-8" MaxWidth="MaxWidth.False">
     <div class="wrap-layer">
@@ -9,16 +13,25 @@
                     <MudCard Class="custom-card" Elevation="8">
                         <MudCardHeader>
                             <CardHeaderContent>
-                                <MudText Typo="Typo.body2">S & P Health Care Services Select Industry Index</MudText>
+                                @* <MudText Typo="Typo.body2">S & P Health Care Services Select Industry Index</MudText> *@
+                                <MudText Typo="Typo.body2">Dow Jones Index</MudText>
                             </CardHeaderContent>
                             <CardHeaderActions>
                                 <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="MudBlazor.Color.Default" />
                             </CardHeaderActions>
                         </MudCardHeader>
                         <MudCardContent>
-                            <MudText Typo="Typo.h6">13,444.26</MudText>
+                            @* <MudText Typo="Typo.h6">13,444.26</MudText> *@
+                            <MudText Typo="Typo.h6">@dowObject.previousClose.ToString()</MudText>
                             <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Tertiary" Class="mt-2">
-                                <MudIcon Color="MudBlazor.Color.Tertiary" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                @if(dowObject.dayHigh > dowObject.previousClose)
+                                {
+                                    
+                                }
+                                else
+                                {
+                                    <MudIcon Color="MudBlazor.Color.Tertiary" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                }
                                 0.90%
                             </MudText>
                         </MudCardContent>
@@ -115,6 +128,11 @@
                         </ApexChart>
                     </MudPaper>
                 </MudItem>
+                @* <MudItem xs="12" sm="8">
+                    <MudText>Financial Data: @FinancialData</MudText>
+                    <MudText>Financial Data: @dowObject.averageVolume.ToString()</MudText>
+                    <MudText>Financial Data: @FdObject.fundFamily</MudText>
+                </MudItem> *@
                 <MudItem xs="12" sm="8">
                     <MudPaper Elevation="8" Class="pa-4 custom-card" Style="height: 500px;">
                         <MudText Typo="Typo.h6" Align="MudBlazor.Align.Center">AI Usage by State</MudText>
@@ -792,8 +810,14 @@
 </MudContainer>
 
 @code {
+
     private List<MyData> Data { get; set; } = new();
     private List<MyData> Data2 { get; set; } = new();
+    public string FinancialData { get; set; } = "";
+    public FinancialData dowObject { get; set; } = new();
+    public FinancialData spObject { get; set; } = new();
+    public FinancialData nasdaqObject { get; set; } = new();
+    public HttpClient httpClient = new HttpClient();
 
     protected override void OnInitialized()
     {
@@ -847,7 +871,7 @@
     {
         // using System.Net.Http.Headers;
         var client = new HttpClient();
-        var request = new HttpRequestMessage
+        var requestDJ = new HttpRequestMessage
             {
                 Method = HttpMethod.Post,
                 RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
@@ -856,20 +880,63 @@
                 { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
                 { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
             },
-                // Content = new StringContent("{\"stock\":\"DJIA\"}")
-                // {
-                //     Headers =
-                //     {
-                //         ContentType = new MediaTypeHeaderValue("application/json")
-                //     }
-                // }
+                Content = new StringContent("{\"stock\":\"^DJI\"}")
+                {
+                    Headers =
+                    {
+                        ContentType = new MediaTypeHeaderValue("application/json")
+                    }
+                }
             };
-        var response = await client.SendAsync(request);
+            var requestSP = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
+                Headers =
+            {
+                { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
+                { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
+            },
+                Content = new StringContent("{\"stock\":\"^GSPC\"}")
+                {
+                    Headers =
+                    {
+                        ContentType = new MediaTypeHeaderValue("application/json")
+                    }
+                }
+            };
+            var requestNasdaq = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
+                Headers =
+            {
+                { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
+                { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
+            },
+                Content = new StringContent("{\"stock\":\"^IXIC\"}")
+                {
+                    Headers =
+                    {
+                        ContentType = new MediaTypeHeaderValue("application/json")
+                    }
+                }
+            };
+        var responseDJ = await client.SendAsync(requestDJ);
+        var responseSP = await client.SendAsync(requestSP);
+        var responseNasdaq = await client.SendAsync(requestNasdaq);
         // {
         //     response.EnsureSuccessStatusCode();
-            var body = await response.Content.ReadAsStringAsync();
+        var bodyDJ = await responseDJ.Content.ReadAsStringAsync();
+        var bodySP = await responseSP.Content.ReadAsStringAsync();
+        var bodyNasdaq = await responseNasdaq.Content.ReadAsStringAsync();
         //     Console.WriteLine(body);
         // }
+        FinancialData = bodyDJ.ToString();
+        // FdObject = await httpClient.ReadFromJsonAsync<FinancialData>(request);
+        dowObject = JsonSerializer.Deserialize<FinancialData>(bodyDJ);
+        spObject = JsonSerializer.Deserialize<FinancialData>(bodySP);
+        nasdaqObject = JsonSerializer.Deserialize<FinancialData>(bodyNasdaq);
     }
 }
 
