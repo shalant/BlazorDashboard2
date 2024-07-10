@@ -22,7 +22,7 @@
                         </MudCardHeader>
                         <MudCardContent>
                             @* <MudText Typo="Typo.h6">13,444.26</MudText> *@
-                            <MudText Typo="Typo.h6">@dowObject.previousClose.ToString()</MudText>
+                            <MudText Typo="Typo.h6">@dowObject.previousClose</MudText>
                             <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Tertiary" Class="mt-2">
                                 @if(dowObject.dayHigh > dowObject.previousClose)
                                 {
@@ -44,14 +44,16 @@
                     <MudCard Class="custom-card" Elevation="8">
                         <MudCardHeader>
                             <CardHeaderContent>
-                                <MudText Typo="Typo.body2">S & P RavenPack AI Index</MudText>
+                                @* <MudText Typo="Typo.body2">S & P RavenPack AI Index</MudText> *@
+                                <MudText Typo="Typo.body2">S & P 500</MudText>
                             </CardHeaderContent>
                             <CardHeaderActions>
                                 <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="MudBlazor.Color.Default" />
                             </CardHeaderActions>
                         </MudCardHeader>
                         <MudCardContent>
-                            <MudText Typo="Typo.h6">242.19</MudText>
+                            @* <MudText Typo="Typo.h6">242.19</MudText> *@
+                            <MudText Typo="Typo.h6">@spObject.dayHigh.ToString()</MudText>
                             <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
                                 <MudIcon Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward"></MudIcon>
                                 1.46%
@@ -66,14 +68,15 @@
                     <MudCard Class="custom-card" Elevation="8">
                     <MudCardHeader>
                         <CardHeaderContent>
-                                <MudText Typo="Typo.body2">Dow Jones</MudText>
+                                @* <MudText Typo="Typo.body2">Dow Jones</MudText> *@
+                                <MudText Typo="Typo.body2">Nasdaq</MudText>
                         </CardHeaderContent>
                         <CardHeaderActions>
                             <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="MudBlazor.Color.Default" />
                         </CardHeaderActions>
                     </MudCardHeader>
                     <MudCardContent>
-                            <MudText Typo="Typo.h6">39,765</MudText>
+                            <MudText Typo="Typo.h6">@nasdaqObject.dayHigh.ToString()</MudText>
                         <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
                             <MudIcon Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward"></MudIcon>
                             3.2%
@@ -128,11 +131,11 @@
                         </ApexChart>
                     </MudPaper>
                 </MudItem>
-                @* <MudItem xs="12" sm="8">
-                    <MudText>Financial Data: @FinancialData</MudText>
+                <MudItem xs="12" sm="8">
+                    @* <MudText>Financial Data: @FinancialData</MudText> *@
                     <MudText>Financial Data: @dowObject.averageVolume.ToString()</MudText>
-                    <MudText>Financial Data: @FdObject.fundFamily</MudText>
-                </MudItem> *@
+                    @* <MudText>Financial Data: @FdObject.fundFamily</MudText> *@
+                </MudItem>
                 <MudItem xs="12" sm="8">
                     <MudPaper Elevation="8" Class="pa-4 custom-card" Style="height: 500px;">
                         <MudText Typo="Typo.h6" Align="MudBlazor.Align.Center">AI Usage by State</MudText>
@@ -821,7 +824,7 @@
 
     protected override void OnInitialized()
     {
-        FetchEconomicData2();
+        FetchEconomicData();
 
         Data.Add(new MyData { Category = "Jan", NetProfit = 12, Revenue = 33 });
         Data.Add(new MyData { Category = "Feb", NetProfit = 43, Revenue = 42 });
@@ -848,26 +851,6 @@
     }
 
     public async Task FetchEconomicData()
-    {
-        var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri("https://us-states.p.rapidapi.com/basic"),
-                Headers =
-    {
-        { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
-        { "x-rapidapi-host", "us-states.p.rapidapi.com" },
-    },
-            };
-        // var response = await client.SendAsync(request);
-        // var body = await response.Content.ReadAsStringAsync();
-        // uglyData = body;
-        // StateData = await response.Content.ReadFromJsonAsync<List<State>>();
-        // await client.GetFromJsonAsync<State>($"https://quickstats.nass.usda.gov/api/api_GET/?key=C2ADF26B-BD8D-328A-968F-2F175A287144&commodity_desc={Commodity}&statisticcat_desc={StatisticalCategory}&unit_desc={UnitDescending}&year__GE={Year}");
-        // ListOfValues = UsdaInfoObject.data.Select(x => x.Value).ToList();
-    }
-
-    public async Task FetchEconomicData2()
     {
         // using System.Net.Http.Headers;
         var client = new HttpClient();
@@ -943,7 +926,25 @@
 
 
 
-
+ @* public async Task FetchEconomicData2()
+    {
+        var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://us-states.p.rapidapi.com/basic"),
+                Headers =
+    {
+        { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
+        { "x-rapidapi-host", "us-states.p.rapidapi.com" },
+    },
+            };
+        // var response = await client.SendAsync(request);
+        // var body = await response.Content.ReadAsStringAsync();
+        // uglyData = body;
+        // StateData = await response.Content.ReadFromJsonAsync<List<State>>();
+        // await client.GetFromJsonAsync<State>($"https://quickstats.nass.usda.gov/api/api_GET/?key=C2ADF26B-BD8D-328A-968F-2F175A287144&commodity_desc={Commodity}&statisticcat_desc={StatisticalCategory}&unit_desc={UnitDescending}&year__GE={Year}");
+        // ListOfValues = UsdaInfoObject.data.Select(x => x.Value).ToList();
+    } *@
 
 @* <PageTitle>Home</PageTitle>
 
