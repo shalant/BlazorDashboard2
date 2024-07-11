@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|solutionrelative:dashboard\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{009E9D1A-EE83-4C16-B29D-941D4CDB3E9A}|Dashboard\\Dashboard.csproj|c:\\users\\digdr\\documents\\coding\\blazordashboard2\\dashboard\\dashboard\\services\\aiusageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 410,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Data.razor",
               "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Pages\\Data.razor",
               "RelativeDocumentMoniker": "Dashboard\\Components\\Pages\\Data.razor",
@@ -59,20 +59,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\App.razor",
               "RelativeDocumentMoniker": "Dashboard\\Components\\App.razor",
               "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\App.razor",
               "RelativeToolTip": "Dashboard\\Components\\App.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-11T02:25:54.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Dashboard\\Components\\Layout\\NavMenu.razor",
@@ -80,8 +80,7 @@
               "RelativeToolTip": "Dashboard\\Components\\Layout\\NavMenu.razor",
               "ViewState": "AQIAACQAAAAAAAAAAAAmwDwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-08T03:29:51.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T03:29:51.508Z"
             },
             {
               "$type": "Document",
@@ -109,20 +108,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Dashboard\\Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Dashboard\\Components\\Pages\\Home.razor",
-              "ViewState": "AQIAAHwDAAAAAAAAAAAmwIsDAAAIAAAA",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAUwIsDAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-04T13:06:37.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Dashboard\\Components\\Layout\\MainLayout.razor",
@@ -130,8 +129,7 @@
               "RelativeToolTip": "Dashboard\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AQIAADMAAAAAAAAAAAAAAEQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T02:05:26.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T02:05:26.384Z"
             }
           ]
         }
