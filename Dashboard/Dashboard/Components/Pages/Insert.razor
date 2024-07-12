@@ -4,34 +4,72 @@
 @using Dashboard.Models
 @using Dashboard.Data
 @using Dashboard.Services
-@inject DataContext dataContext
+@inject DataContext _dataContext
 @inject EmployeeService employeeService
 @inject ProductService productService
 @inject AiUsageService aiUsageService
+@inject MudBlazor.ISnackbar snackBar
 
 <MudContainer>
 <h3>Live Data</h3>
-@foreach(var emp in EmployeesList)
-{
-    <p>@emp.Name | @emp.Title</p>
-}
+    <MudTabs Elevation="4" Rounded="true" Color="@MudBlazor.Color.Primary">
+    <MudTabPanel Text="AI Usage">
+            <MudItem xs="12" sm="6">
+                <MudCard>
+                    <MudCardHeader>
+                        <MudText>State AI Usage Info</MudText>
+                    </MudCardHeader>
+                    <MudCardContent>
+                @* <EditForm Model="@aiUsage" OnValidSubmit="OnValidSubmitAi">
+                    <MudItem> *@
+                        <MudTextField Label="StateName" @bind-Value="@aiUsage.StateName" />
+                        <MudTextField Label="Usage" @bind-Value="@aiUsage.Usage" />
+                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Save</MudButton>
+                    @* </MudItem> *@
+                @* </EditForm> *@
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
 
-@* @if(ProductList is not null)
-{
-    <MudText>@ProductList.FirstOrDefault().Name</MudText>
-}
-else
-{
-    <MudButton OnClick="GetProducts"></MudButton>
-} *@
+            <MudTable Elevation="25" Items="AiUsageList" Filter="new Func<AiUsage, bool>(Search)" @bind-aiUsage="aiUsage">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Ai Usage</MudText>
+        <MudToolBarSpacer />
+        <MudTextField @bind-Value="searchString" Placeholder="Search for Ai Usage..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="MudBlazor.Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>State Name</MudTh>
+        <MudTh>Usage</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Id">@aiUsage.StateName</MudTd>
+                    <MudTd DataLabel="Usage">@aiUsage.Usage</MudTd>
+        <MudTd DataLabel="">
+                        <MudFab @onclick="@(()=>Edit(aiUsage.Id))" Color="MudBlazor.Color.Primary" Icon="@Icons.Material.Filled.Edit" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
+                        <MudFab @onclick="@(()=>Delete(aiUsage.Id))" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.Delete" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
+        </MudTd>
+    </RowTemplate>
+</MudTable>
 
-    @foreach(var prod in ProductList)
+            @* <MudItem xs="12" sm="6">
+                <MudDataGrid T="AiUsage" Items="AiUsageList">
+                    <Columns>
+                        <PropertyColumn Property="x => x.StateName" Title="State Name"></PropertyColumn>
+                        <PropertyColumn Property="x => x.Usage" Title="Usage"></PropertyColumn>
+                        <TemplateColumn StickyRight="true">
+                            <CellTemplate>
+                                <MudIconButton Icon="@Icons.Material.Outlined.Edit" Size="@MudBlazor.Size.Small" />
+                            </CellTemplate>
+                        </TemplateColumn>
+                    </Columns>
+                </MudDataGrid>
+            </MudItem> *@
+    </MudTabPanel>
+    <MudTabPanel Text="Products">
+         @foreach(var prod in ProductList)
     {
         <p>@prod.Name | @prod.Price</p>
     }
-
-        <MudGrid>
-            <MudItem xs="12" sm="6">
 
 <MudText>Product Info</MudText>
 <EditForm Model="@product" OnValidSubmit="OnValidSubmit">
@@ -44,59 +82,30 @@ else
             <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Insert</MudButton>
     
 </EditForm>
-            </MudItem>
+    </MudTabPanel>
+    <MudTabPanel Text="Employees">
+            @foreach (var emp in EmployeesList)
+            {
+                <p>@emp.Name | @emp.Title</p>
+            }
+    </MudTabPanel>
+</MudTabs>
 
-        <MudItem xs="12" sm="6">
-        <MudText>State AI Usage Info</MudText>
-        <EditForm Model="@aiUsage" OnValidSubmit="OnValidSubmitAi">
-                <MudItem>
-                    <MudTextField Label="StateName" @bind-Value="@aiUsage.StateName" />
-                    <MudTextField Label="Usage" @bind-Value="@aiUsage.Usage" />
-                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Insert</MudButton>
-                </MudItem>
 
-        </EditForm>
-</MudItem>
-        </MudGrid>
+@* @if(ProductList is not null)
+{
+    <MudText>@ProductList.FirstOrDefault().Name</MudText>
+}
+else
+{
+    <MudButton OnClick="GetProducts"></MudButton>
+} *@
+
+
 
 </MudContainer>
 
-@code {
-    Product product = new Product();
-    AiUsage aiUsage = new AiUsage();
-    private List<Product> ProductList = new List<Product>();
-    private List<Employee> EmployeesList = new List<Employee>();
-    private List<AiUsage> AiUsageList = new List<AiUsage>();
 
-    protected override async Task OnInitializedAsync()
-    {
-        ProductList = await productService.GetAllProducts();
-        EmployeesList = await employeeService.GetAllEmployees();
-        AiUsageList = await aiUsageService.GetAllAiUsage();
-    }
-
-    private async Task OnValidSubmit()
-    {
-        dataContext.Products.Add(product);
-        await dataContext.SaveChangesAsync();
-    }
-    
-    private async Task OnValidSubmitAi()
-    {
-        dataContext.AiUsages.Add(aiUsage);
-        await dataContext.SaveChangesAsync();
-    }
-
-    // private async Task<List<Product>> GetProducts()
-    // {
-    //     var tempProducts = await dataContext.Products.ToList();
-    //     if(tempProducts != null)
-    //     {
-    //         ProductList = tempProducts;
-    //     }
-        
-    // }
-}
 
 
 

@@ -9,6 +9,14 @@
     <MudText Typo="Typo.h4" Align="MudBlazor.Align.Center" Class="mt-5">Ai Usage Data</MudText>
     <MudButton Variant="Variant.Filled" Class="mt-3 align-items-center" OnClick="FetchStateData">Fetch State Names</MudButton>
     <MudButton Variant="Variant.Filled" Class="mt-3 align-items-center" OnClick="FetchAiUsage">Fetch Ai Usage</MudButton>
+    <EditForm Model="@model">
+        <MudSelect T="string" Label="Select a data set" AnchorOrigin="Origin.BottomCenter">
+        <MudSelectItem Value="@("Fetch State Names")">State Names</MudSelectItem>
+        <MudSelectItem Value="@("Fetch AI Usage")">AI Usage</MudSelectItem>
+    </MudSelect>
+        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="MudBlazor.Color.Primary" Class="ml-auto">Submit</MudButton>
+
+    </EditForm>
     @if (StateData.Count > 0)
     {
         <MudText Typo="Typo.h3" Color="MudBlazor.Color.Tertiary">
@@ -1556,6 +1564,7 @@
     public string uglyData = "";
     public List<State> StateData = new List<State>();
     private List<AiUsage> AiUsageList = new List<AiUsage>();
+    public string model = "";
 
     public async Task FetchAiUsage()
     {

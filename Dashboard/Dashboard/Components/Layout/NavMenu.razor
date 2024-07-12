@@ -6,8 +6,10 @@
     @* <MudNavLink Href="/counter" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Calculate">Counter</MudNavLink> *@
     @* <MudNavLink Href="/weather" Match="NavLinkMatch.All">Weather</MudNavLink> *@
     <MudNavLink Href="/data" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Map" Class="nav-header" IconColor="MudBlazor.Color.Tertiary">Data</MudNavLink>
-    <MudNavLink Href="/insert" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Edit" Class="nav-header" IconColor="MudBlazor.Color.Tertiary">Insert</MudNavLink>
+    <MudNavLink Href="/insert" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Edit" Class="nav-header" IconColor="MudBlazor.Color.Tertiary">CRUD</MudNavLink>
     <MudNavLink Href="/auth" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Person" Class="nav-header" IconColor="MudBlazor.Color.Tertiary">Auth Required</MudNavLink>
+    <MudNavLink Href="/Account/Register" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Person" Class="nav-header" IconColor="MudBlazor.Color.Tertiary">Register</MudNavLink>
+    <MudNavLink Href="/Account/Login" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Person" Class="nav-header" IconColor="MudBlazor.Color.Tertiary">Login</MudNavLink>
     <AuthorizeView>
         <Authorized>
             <div class="nav-item px-3">
@@ -26,16 +28,16 @@
             </div>
         </Authorized>
         <NotAuthorized>
-            <div class="nav-item px-3">
+            @* <div class="nav-item px-3">
                 <NavLink class="nav-link" href="Account/Register">
                     <span class="bi bi-person-nav-menu" aria-hidden="true"></span> Register
                 </NavLink>
             </div>
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="Account/Login">
-                    <span class="bi bi-person-badge-nav-menu" aria-hidden="true"></span> Login
+                    <span class="bi bi-person-badge-nav-menu nav-header" aria-hidden="true"></span> Login
                 </NavLink>
-            </div>
+            </div> *@
         </NotAuthorized>
     </AuthorizeView>
 </MudNavMenu>

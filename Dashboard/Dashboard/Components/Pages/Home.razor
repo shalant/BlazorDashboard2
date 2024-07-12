@@ -21,27 +21,41 @@
                             </CardHeaderActions>
                         </MudCardHeader>
                         <MudCardContent>
-                            @* <MudText Typo="Typo.h6">13,444.26</MudText> *@
                             @if(dowObject.volume == 0)
                             {
-                                <MudButton Variant="Variant.Filled" OnClick="GetDjData">Get DJ data</MudButton>
-                            }
-                            <MudText Typo="Typo.h6">@dowObject.previousClose</MudText>
-                            <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Tertiary" Class="mt-2">
-                                @if(dowObject.dayHigh > dowObject.previousClose)
-                                {
+                                <MudText Typo="Typo.h6">39,444.26</MudText>
+                                @* <MudButton Variant="Variant.Filled" OnClick="GetDjData">Get DJ data</MudButton> *@
+                                <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
                                     <MudIcon Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward"></MudIcon>
-                                    <MudText>@dowObject.dayHigh / @dowObject.previousClose</MudText>
-                                }
-                                else
-                                {
-                                    <MudIcon Color="MudBlazor.Color.Tertiary" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
-                                }
-                                0.90%
-                            </MudText>
+                                    1.46%
+                                </MudText>
+                            }
+                            else
+                            {
+                                <MudText Typo="Typo.h6">@dowObject.previousClose</MudText>
+                                <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Tertiary" Class="mt-2">
+                                    @if (dowObject.dayHigh > dowObject.previousClose)
+                                    {
+                                        <div class="d-flex">
+                                        <MudIcon Class="d-flex" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward">
+                                        </MudIcon>
+                                        <MudText Color="MudBlazor.Color.Secondary">@djPercentChange %</MudText>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <MudIcon Color="MudBlazor.Color.Tertiary" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                        <MudText Color="MudBlazor.Color.Secondary">@djPercentChange %</MudText>
+                                    }
+                                </MudText>
+                            }
                         </MudCardContent>
                         <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary" Href="https://www.spglobal.com/spdji/en/indices/equity/sp-health-care-services-select-industry-index/#overview">Read More</MudButton>
+                            <div class="d-flex">
+                                <MudButton Variant="Variant.Filled" OnClick="GetDjData" Class="me-5">!Dummy Data</MudButton>
+                                <MudSpacer />
+                                <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary" Class="ms-5" Href="https://www.spglobal.com/spdji/en/indices/equity/sp-health-care-services-select-industry-index/#overview">Read More</MudButton>
+                            </div>
                         </MudCardActions>
                     </MudCard>
                 </MudItem>
@@ -57,19 +71,41 @@
                             </CardHeaderActions>
                         </MudCardHeader>
                         <MudCardContent>
-                            @* <MudText Typo="Typo.h6">242.19</MudText> *@
-                            @if(spObject.volume == 0)
+                            @if (spObject.volume == 0)
                             {
-                                <MudButton Variant="Variant.Filled" OnClick="GetSpData">Get S&P data</MudButton>
+                                <MudText Typo="Typo.h6">5,588.44</MudText>
+                                @* <MudButton Variant="Variant.Filled" OnClick="GetDjData">Get DJ data</MudButton> *@
+                                <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
+                                    <MudIcon Color="MudBlazor.Color.Tertiary" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                    0.78%
+                                </MudText>
                             }
-                            <MudText Typo="Typo.h6">@spObject.previousClose</MudText>
-                            <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
-                                <MudIcon Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward"></MudIcon>
-                                1.46%
-                            </MudText>
+                            else
+                            {
+                                <MudText Typo="Typo.h6">@spObject.previousClose</MudText>
+                                <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Tertiary" Class="mt-2">
+                                    @if (spObject.dayHigh > spObject.previousClose)
+                                    {
+                                        <div class="d-flex">
+                                            <MudIcon Class="d-flex" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward">
+                                            </MudIcon>
+                                            <MudText Color="MudBlazor.Color.Secondary">@djPercentChange %</MudText>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <MudIcon Color="MudBlazor.Color.Warning" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                        <MudText Color="MudBlazor.Color.Warning">@djPercentChange %</MudText>
+                                    }
+                                </MudText>
+                            }
                         </MudCardContent>
                         <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary" Href="https://www.spglobal.com/spdji/en/indices/multi-asset/sp-500-ravenpack-ai-index/#overview">Read More</MudButton>
+                            <div class="d-flex">
+                                <MudButton Variant="Variant.Filled" OnClick="GetSpData" Class="me-5">!Dummy Data</MudButton>
+                                <MudSpacer />
+                                <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary" Class="ms-5" Href="https://www.spglobal.com/spdji/en/indices/equity/sp-health-care-services-select-industry-index/#overview">Read More</MudButton>
+                            </div>
                         </MudCardActions>
                     </MudCard>
                 </MudItem>
@@ -84,24 +120,47 @@
                             <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="MudBlazor.Color.Default" />
                         </CardHeaderActions>
                     </MudCardHeader>
-                    <MudCardContent>
-                            @if(nasdaqObject.volume == 0)
+                        <MudCardContent>
+                            @if (nasdaqObject.volume == 0)
                             {
-                                <MudButton Variant="Variant.Filled" OnClick="GetNasdaqData">Get Nasdaq data</MudButton>
+                                <MudText Typo="Typo.h6">18,319.62</MudText>
+                                @* <MudButton Variant="Variant.Filled" OnClick="GetDjData">Get DJ data</MudButton> *@
+                                <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Warning" Class="mt-2">
+                                    <MudIcon Color="MudBlazor.Color.Warning" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                    1.73%
+                                </MudText>
                             }
-                            <MudText Typo="Typo.h6">@nasdaqObject.dayHigh</MudText>
-                        <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Secondary" Class="mt-2">
-                            <MudIcon Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward"></MudIcon>
-                            3.2%
-                        </MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary" Href="https://www.dowjones.com/">Read More</MudButton>
-                    </MudCardActions>
+                            else
+                            {
+                                <MudText Typo="Typo.h6">@nasdaqObject.previousClose</MudText>
+                                <MudText Align="MudBlazor.Align.Left" Color="MudBlazor.Color.Tertiary" Class="mt-2">
+                                    @if (nasdaqObject.dayHigh > nasdaqObject.previousClose)
+                                    {
+                                        <div class="d-flex">
+                                            <MudIcon Class="d-flex" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.ArrowUpward">
+                                            </MudIcon>
+                                            <MudText Color="MudBlazor.Color.Secondary">@djPercentChange %</MudText>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <MudIcon Color="MudBlazor.Color.Warning" Icon="@Icons.Material.Filled.ArrowDownward"></MudIcon>
+                                        <MudText Color="MudBlazor.Color.Warning">@djPercentChange %</MudText>
+                                    }
+                                </MudText>
+                            }
+                        </MudCardContent>
+                        <MudCardActions>
+                            <div class="d-flex">
+                                <MudButton Variant="Variant.Filled" OnClick="GetNasdaqData" Class="me-5">!Dummy Data</MudButton>
+                                <MudSpacer />
+                                <MudButton Variant="Variant.Text" Color="MudBlazor.Color.Primary" Class="ms-5" Href="https://www.spglobal.com/spdji/en/indices/equity/sp-health-care-services-select-industry-index/#overview">Read More</MudButton>
+                            </div>
+                        </MudCardActions>
                     </MudCard>
                 </MudItem>
                 <MudItem xs="12" sm="6">
-                            <MudPaper Elevation="8" Class="pa-4 custom-card" Style="height: 100%;">
+                    <MudPaper Elevation="8" Class="pa-4 custom-card" Style="height: 100%;">
                         <ApexChart TItem="MyData"
                                    Title="Important Data">
 
@@ -820,196 +879,7 @@
     </div>
 </MudContainer>
 
-@code {
 
-    private List<MyData> Data { get; set; } = new();
-    private List<MyData> Data2 { get; set; } = new();
-    public string FinancialData { get; set; } = "";
-    public FinancialData dowObject { get; set; } = new();
-    public FinancialData spObject { get; set; } = new();
-    public FinancialData nasdaqObject { get; set; } = new();
-    public HttpClient httpClient = new HttpClient();
-
-    protected override void OnInitialized()
-    {
-        // FetchEconomicData();
-
-        Data.Add(new MyData { Category = "Jan", NetProfit = 12, Revenue = 33 });
-        Data.Add(new MyData { Category = "Feb", NetProfit = 43, Revenue = 42 });
-        Data.Add(new MyData { Category = "Mar", NetProfit = 112, Revenue = 23 });
-        Data2.Add(new MyData { Category = "Apr", NetProfit = 52, Revenue = 83 });
-        Data2.Add(new MyData { Category = "May", NetProfit = 42, Revenue = 42 });
-        Data2.Add(new MyData { Category = "Jun", NetProfit = 72, Revenue = 113 });
-        Data2.Add(new MyData { Category = "Jul", NetProfit = 82, Revenue = 123 });
-        Data2.Add(new MyData { Category = "Aug", NetProfit = 92, Revenue = 143 });
-    }
-
-    public class MyData
-    {
-        public string Category { get; set; }
-        public int NetProfit { get; set; }
-        public int Revenue { get; set; }
-    }
-
-    public class MyData2
-    {
-        public string Category { get; set; }
-        public int NetProfit { get; set; }
-        public int Revenue { get; set; }
-    }
-
-    public async Task GetDjData()
-    {
-        // var client = new HttpClient();
-        var requestDJ = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
-                Headers =
-            {
-                { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
-                { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
-            },
-                Content = new StringContent("{\"stock\":\"^DJI\"}")
-                {
-                    Headers =
-                    {
-                        ContentType = new MediaTypeHeaderValue("application/json")
-                    }
-                }
-            };
-        var responseDJ = await httpClient.SendAsync(requestDJ);
-        var bodyDJ = await responseDJ.Content.ReadAsStringAsync();
-        dowObject = JsonSerializer.Deserialize<FinancialData>(bodyDJ);
-    }
-    
-    public async Task GetSpData()
-    {
-        var client = new HttpClient();
-        var requestSp = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
-                Headers =
-            {
-                { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
-                { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
-            },
-                Content = new StringContent("{\"stock\":\"^GSPC\"}")
-                {
-                    Headers =
-                    {
-                        ContentType = new MediaTypeHeaderValue("application/json")
-                    }
-                }
-            };
-        var responseSp = await httpClient.SendAsync(requestSp);
-        var bodySp = await responseSp.Content.ReadAsStringAsync();
-        spObject = JsonSerializer.Deserialize<FinancialData>(bodySp);
-    }
-    
-    public async Task GetNasdaqData()
-    {
-        var client = new HttpClient();
-        var requestNasdaq = new HttpRequestMessage
-            {
-                Method = HttpMethod.Post,
-                RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
-                Headers =
-            {
-                { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
-                { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
-            },
-                Content = new StringContent("{\"stock\":\"^IXIC\"}")
-                {
-                    Headers =
-                    {
-                        ContentType = new MediaTypeHeaderValue("application/json")
-                    }
-                }
-            };
-        var responseNasdaq = await client.SendAsync(requestNasdaq);
-        var bodyNasdaq = await responseNasdaq.Content.ReadAsStringAsync();
-        nasdaqObject = JsonSerializer.Deserialize<FinancialData>(bodyNasdaq);
-    }
-
-    // public async Task FetchEconomicData()
-    // {
-    //     // using System.Net.Http.Headers;
-    //     var client = new HttpClient();
-    //     var requestDJ = new HttpRequestMessage
-    //         {
-    //             Method = HttpMethod.Post,
-    //             RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
-    //             Headers =
-    //         {
-    //             { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
-    //             { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
-    //         },
-    //             Content = new StringContent("{\"stock\":\"^DJI\"}")
-    //             {
-    //                 Headers =
-    //                 {
-    //                     ContentType = new MediaTypeHeaderValue("application/json")
-    //                 }
-    //             }
-    //         };
-    //     var requestSP = new HttpRequestMessage
-    //         {
-    //             Method = HttpMethod.Post,
-    //             RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
-    //             Headers =
-    //         {
-    //             { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
-    //             { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
-    //         },
-    //             Content = new StringContent("{\"stock\":\"^GSPC\"}")
-    //             {
-    //                 Headers =
-    //                 {
-    //                     ContentType = new MediaTypeHeaderValue("application/json")
-    //                 }
-    //             }
-    //         };
-    //     var requestNasdaq = new HttpRequestMessage
-    //         {
-    //             Method = HttpMethod.Post,
-    //             RequestUri = new Uri("https://yahoo-finance160.p.rapidapi.com/info"),
-    //             Headers =
-    //         {
-    //             { "x-rapidapi-key", "d0a001874dmshb993809de6fe686p13f52cjsn2899437b8f3e" },
-    //             { "x-rapidapi-host", "yahoo-finance160.p.rapidapi.com" },
-    //         },
-    //             Content = new StringContent("{\"stock\":\"^IXIC\"}")
-    //             {
-    //                 Headers =
-    //                 {
-    //                     ContentType = new MediaTypeHeaderValue("application/json")
-    //                 }
-    //             }
-    //         };
-    //     var responseDJ = await client.SendAsync(requestDJ);
-    //     var responseSP = Task.Run(async delegate
-    //     {
-    //         await Task.Delay(1100);
-    //         return await client.SendAsync(requestSP);
-    //     });
-    //     // await Task.Delay(1500).ContinueWith( client.SendAsync(requestSP));
-    //     var responseNasdaq = await client.SendAsync(requestNasdaq);
-    //     // {
-    //     //     response.EnsureSuccessStatusCode();
-    //     var bodyDJ = await responseDJ.Content.ReadAsStringAsync();
-    //     var bodySP = await responseSP.Result.ReadAsStringAsync();
-    //     var bodyNasdaq = await responseNasdaq.Content.ReadAsStringAsync();
-    //     //     Console.WriteLine(body);
-    //     // }
-    //     FinancialData = bodyDJ.ToString();
-    //     // FdObject = await httpClient.ReadFromJsonAsync<FinancialData>(request);
-    //     dowObject = JsonSerializer.Deserialize<FinancialData>(bodyDJ);
-    //     spObject = JsonSerializer.Deserialize<FinancialData>(bodySP);
-    //     nasdaqObject = JsonSerializer.Deserialize<FinancialData>(bodyNasdaq);
-    // }
-}
 
 
 
