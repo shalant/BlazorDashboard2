@@ -24,7 +24,7 @@
                     <MudItem> *@
                         <MudTextField Label="StateName" @bind-Value="@aiUsage.StateName" />
                         <MudTextField Label="Usage" @bind-Value="@aiUsage.Usage" />
-                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Save</MudButton>
+                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" OnClick="Save">Save</MudButton>
                     @* </MudItem> *@
                 @* </EditForm> *@
                     </MudCardContent>
@@ -38,15 +38,17 @@
         <MudTextField @bind-Value="searchString" Placeholder="Search for Ai Usage..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="MudBlazor.Size.Medium" Class="mt-0"></MudTextField>
     </ToolBarContent>
     <HeaderContent>
+        <MudTh hidden>Id</MudTh>
         <MudTh>State Name</MudTh>
         <MudTh>Usage</MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="Id">@aiUsage.StateName</MudTd>
-                    <MudTd DataLabel="Usage">@aiUsage.Usage</MudTd>
-        <MudTd DataLabel="">
-                        <MudFab @onclick="@(()=>Edit(aiUsage.Id))" Color="MudBlazor.Color.Primary" Icon="@Icons.Material.Filled.Edit" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
-                        <MudFab @onclick="@(()=>Delete(aiUsage.Id))" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.Delete" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
+        <MudTd DataLabel="Id" hidden>@context.Id</MudTd>
+        <MudTd DataLabel="StateName">@context.StateName</MudTd>
+        <MudTd DataLabel="Usage">@context.Usage</MudTd>
+        <MudTd DataLabel="Actions">
+                        <MudFab @onclick="@(()=>Edit(context.Id))" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.Edit" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
+                        <MudFab @onclick="@(()=>Delete(context.Id))" Color="MudBlazor.Color.Error" Icon="@Icons.Material.Filled.Delete" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
         </MudTd>
     </RowTemplate>
 </MudTable>

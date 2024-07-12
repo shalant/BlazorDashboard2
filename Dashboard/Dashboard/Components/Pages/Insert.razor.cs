@@ -17,8 +17,8 @@ namespace Dashboard.Components.Pages
         {
             ProductList = await productService.GetAllProducts();
             EmployeesList = await employeeService.GetAllEmployees();
-            //AiUsageList = await aiUsageService.GetAllAiUsage();
-            await GetAiUsage();
+            AiUsageList = await aiUsageService.GetAllAiUsage();
+            //AiUsageList = await GetAiUsage();
         }
 
         private async Task<List<AiUsage>> GetAiUsage()
@@ -53,7 +53,7 @@ namespace Dashboard.Components.Pages
         private void Delete(int id)
         {
             aiUsageService.DeleteAiUsage(id);
-            snackBar.Add("Ai Usage Deleted.", Severity.Success);
+            snackBar.Add("Ai Usage Deleted.", Severity.Error);
             GetAiUsage();
         }
 
