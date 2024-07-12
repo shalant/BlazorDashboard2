@@ -13,7 +13,7 @@
 <MudContainer>
 <h3>Live Data</h3>
     <MudTabs Elevation="4" Rounded="true" Color="@MudBlazor.Color.Primary">
-    <MudTabPanel Text="AI Usage">
+        <MudTabPanel Text="AI Usage">
             <MudItem xs="12" sm="6">
                 <MudCard>
                     <MudCardHeader>
@@ -30,29 +30,27 @@
                     </MudCardContent>
                 </MudCard>
             </MudItem>
-
             <MudTable Elevation="25" Items="AiUsageList" Filter="new Func<AiUsage, bool>(Search)" @bind-aiUsage="aiUsage">
-    <ToolBarContent>
-        <MudText Typo="Typo.h6">Ai Usage</MudText>
-        <MudToolBarSpacer />
-        <MudTextField @bind-Value="searchString" Placeholder="Search for Ai Usage..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="MudBlazor.Size.Medium" Class="mt-0"></MudTextField>
-    </ToolBarContent>
-    <HeaderContent>
-        <MudTh hidden>Id</MudTh>
-        <MudTh>State Name</MudTh>
-        <MudTh>Usage</MudTh>
-    </HeaderContent>
-    <RowTemplate>
-        <MudTd DataLabel="Id" hidden>@context.Id</MudTd>
-        <MudTd DataLabel="StateName">@context.StateName</MudTd>
-        <MudTd DataLabel="Usage">@context.Usage</MudTd>
-        <MudTd DataLabel="Actions">
-                        <MudFab @onclick="@(()=>Edit(context.Id))" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.Edit" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
-                        <MudFab @onclick="@(()=>Delete(context.Id))" Color="MudBlazor.Color.Error" Icon="@Icons.Material.Filled.Delete" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
-        </MudTd>
-    </RowTemplate>
-</MudTable>
-
+                <ToolBarContent>
+                    <MudText Typo="Typo.h6">Ai Usage</MudText>
+                    <MudToolBarSpacer />
+                    <MudTextField @bind-Value="searchString" Placeholder="Search for Ai Usage..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="MudBlazor.Size.Medium" Class="mt-0"></MudTextField>
+                </ToolBarContent>
+                <HeaderContent>
+                    <MudTh hidden>Id</MudTh>
+                    <MudTh>State Name</MudTh>
+                    <MudTh>Usage</MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="Id" hidden>@context.Id</MudTd>
+                    <MudTd DataLabel="StateName">@context.StateName</MudTd>
+                    <MudTd DataLabel="Usage">@context.Usage</MudTd>
+                    <MudTd DataLabel="Actions">
+                                    <MudFab @onclick="@(()=>Edit(context.Id))" Color="MudBlazor.Color.Secondary" Icon="@Icons.Material.Filled.Edit" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
+                                    <MudFab @onclick="@(()=>Delete(context.Id))" Color="MudBlazor.Color.Error" Icon="@Icons.Material.Filled.Delete" Size="MudBlazor.Size.Small" IconSize="MudBlazor.Size.Small" />
+                    </MudTd>
+                </RowTemplate>
+            </MudTable>
             @* <MudItem xs="12" sm="6">
                 <MudDataGrid T="AiUsage" Items="AiUsageList">
                     <Columns>
@@ -66,31 +64,29 @@
                     </Columns>
                 </MudDataGrid>
             </MudItem> *@
-    </MudTabPanel>
-    <MudTabPanel Text="Products">
-         @foreach(var prod in ProductList)
-    {
-        <p>@prod.Name | @prod.Price</p>
-    }
+        </MudTabPanel>
+        <MudTabPanel Text="Products">
+             @foreach(var prod in ProductList)
+                {
+                    <p>@prod.Name | @prod.Price</p>
+                }
 
-<MudText>Product Info</MudText>
-<EditForm Model="@product" OnValidSubmit="OnValidSubmit">
+            <MudText>Product Info</MudText>
+            <EditForm Model="@product" OnValidSubmit="OnValidSubmit">
     
-            <MudTextField Label="Name" @bind-Value="@product.Name" />
-            <MudTextField Label="Price" @bind-Value="@product.Price" />
-            <MudTextField Label="Year" @bind-Value="@product.Year" />
-            <MudCheckBox @bind-Value="@product.Available" />
-
-            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Insert</MudButton>
-    
-</EditForm>
-    </MudTabPanel>
-    <MudTabPanel Text="Employees">
-            @foreach (var emp in EmployeesList)
-            {
-                <p>@emp.Name | @emp.Title</p>
-            }
-    </MudTabPanel>
+                <MudTextField Label="Name" @bind-Value="@product.Name" />
+                <MudTextField Label="Price" @bind-Value="@product.Price" />
+                <MudTextField Label="Year" @bind-Value="@product.Year" />
+                <MudCheckBox @bind-Value="@product.Available" />
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled">Insert</MudButton>
+            </EditForm>
+        </MudTabPanel>
+        <MudTabPanel Text="Employees">
+                @foreach (var emp in EmployeesList)
+                {
+                    <p>@emp.Name | @emp.Title</p>
+                }
+        </MudTabPanel>
 </MudTabs>
 
 
@@ -103,12 +99,4 @@ else
     <MudButton OnClick="GetProducts"></MudButton>
 } *@
 
-
-
 </MudContainer>
-
-
-
-
-
-

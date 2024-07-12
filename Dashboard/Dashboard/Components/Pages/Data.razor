@@ -5,7 +5,7 @@
 @inject DataContext dataContext
 @inject AiUsageService aiUsageService
 
-<MudContainer>
+<MudContainer Class="glassy-background">
     <MudText Typo="Typo.h4" Align="MudBlazor.Align.Center" Class="mt-5">Ai Usage Data</MudText>
     <MudButton Variant="Variant.Filled" Class="mt-3 align-items-center" OnClick="FetchStateData">Fetch State Names</MudButton>
     <MudButton Variant="Variant.Filled" Class="mt-3 align-items-center" OnClick="FetchAiUsage">Fetch Ai Usage</MudButton>
@@ -1085,7 +1085,7 @@
     }
     else
     {
-        <MudPaper Elevation="2" Class="pa-4 mt-3" Style="height: 500px;">
+        <MudPaper Elevation="2" Class="pa-4 mt-3 glassy-foreground" Style="height: 500px;">
 
             <svg id="colorChangeMap" viewBox="150 0 560 400">
                 <g transform="scale(0.58785548118519790) translate(332.1650298692115, 0)">

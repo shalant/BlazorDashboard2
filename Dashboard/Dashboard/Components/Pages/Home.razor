@@ -5,8 +5,8 @@
 @using System.Net.Http.Json
 @using System.Text.Json
 
-<MudContainer Class="mt-12 px-8" MaxWidth="MaxWidth.False">
-    <div class="wrap-layer">
+<MudContainer Class=" " MaxWidth="MaxWidth.False">
+    <div class="mt-12 px-8 custom-gradient">
         <div class="content-layer">
             <MudGrid>
                 <MudItem xs="12" sm="6" md="4">
@@ -205,7 +205,9 @@
                 </MudItem>
                 <MudItem xs="12" sm="8">
                     @* <MudText>Financial Data: @FinancialData</MudText> *@
-                    <MudText>Financial Data: @dowObject.averageVolume.ToString()</MudText>
+                    <div class="glassy-foreground">
+                        <MudText>Financial Data: @dowObject.averageVolume.ToString()</MudText>
+                    </div>
                     @* <MudText>Financial Data: @FdObject.fundFamily</MudText> *@
                 </MudItem>
                 <MudItem xs="12" sm="8">
