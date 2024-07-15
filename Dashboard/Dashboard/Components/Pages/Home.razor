@@ -5,11 +5,11 @@
 @using System.Net.Http.Json
 @using System.Text.Json
 
-<MudContainer Class=" " MaxWidth="MaxWidth.False">
-    <div class="mt-12 px-8 custom-gradient">
+<MudContainer Class=" " MaxWidth="MaxWidth.False" Gutters=false>
+    <div class="wrap-layer px-8 ">
         <div class="content-layer">
-            <MudGrid>
-                <MudItem xs="12" sm="6" md="4">
+            <MudGrid Class="">
+                <MudItem xs="12" sm="6" md="4" Class="mt-6">
                     <MudCard Class="custom-card" Elevation="8">
                         <MudCardHeader>
                             <CardHeaderContent>
@@ -59,7 +59,7 @@
                         </MudCardActions>
                     </MudCard>
                 </MudItem>
-                <MudItem xs="12" sm="6" md="4">
+                <MudItem xs="12" sm="6" md="4" Class="mt-6">
                     <MudCard Class="custom-card" Elevation="8">
                         <MudCardHeader>
                             <CardHeaderContent>
@@ -109,7 +109,7 @@
                         </MudCardActions>
                     </MudCard>
                 </MudItem>
-                <MudItem xs="12" sm="6" md="4">
+                <MudItem xs="12" sm="6" md="4" Class="mt-6">
                     <MudCard Class="custom-card" Elevation="8">
                     <MudCardHeader>
                         <CardHeaderContent>
@@ -203,13 +203,13 @@
                         </ApexChart>
                     </MudPaper>
                 </MudItem>
-                <MudItem xs="12" sm="8">
-                    @* <MudText>Financial Data: @FinancialData</MudText> *@
+                @* <MudItem xs="12" sm="8">
+                    @* <MudText>Financial Data: @FinancialData</MudText>
                     <div class="glassy-foreground">
                         <MudText>Financial Data: @dowObject.averageVolume.ToString()</MudText>
                     </div>
-                    @* <MudText>Financial Data: @FdObject.fundFamily</MudText> *@
-                </MudItem>
+                    @* <MudText>Financial Data: @FdObject.fundFamily</MudText>
+                </MudItem> *@
                 <MudItem xs="12" sm="8">
                     <MudPaper Elevation="8" Class="pa-4 custom-card" Style="height: 500px;">
                         <MudText Typo="Typo.h6" Align="MudBlazor.Align.Center">AI Usage by State</MudText>
@@ -733,7 +733,7 @@
         </div>
         <div class="background-layer">
             @* <svg height="1304.919" viewBox="0 0 992.896 1304.919" width="992.896" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> *@
-            <svg height="1304.919" viewBox="0 0 992.896 1304.919" width="992.896" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            @* <svg height="1304.919" viewBox="0 0 992.896 1304.919" width="992.896" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <filter id="a" filterUnits="userSpaceOnUse" height="404.212" width="395.805" x="391.172" y="786.707">
                     <feOffset dx="-10" dy="-10"></feOffset>
                     <feGaussianBlur result="blur" stdDeviation="17.5"></feGaussianBlur>
@@ -876,7 +876,7 @@
                         <path class="hi-hero-background-hex" d="m180.129 191.7 44.271-76.686c4.054-7.025 4.054-18.524 0-25.55l-44.271-76.687c-4.058-7.027-14.014-12.777-22.129-12.777h-88.552c-8.115 0-18.073 5.75-22.129 12.777l-44.274 76.687c-4.06 7.026-4.06 18.525 0 25.55l44.274 76.686c4.056 7.024 14.014 12.775 22.129 12.775h88.552c8.115 0 18.07-5.751 22.129-12.775" fill="#fff" opacity=".5" transform="matrix(.5 -.87 .87 .5 456.07 372.68)"></path>
                     </g>
                 </g>
-            </svg>
+            </svg> *@
         </div>
     </div>
 </MudContainer>
