@@ -6,7 +6,8 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Class="custom-nav">
+    @* <MudAppBar Class="custom-nav"> *@
+    <MudAppBar Class="">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="MudBlazor.Color.Inherit" Edge="Edge.Start" OnClick="DrawerToggle" />
         <MudButton Href="/">
             @* <MudImage Src="images/tackle_logo.svg" Width="150" Class="mt-1" /> *@
@@ -19,7 +20,8 @@
         </MudButton>
         <MudSpacer />
         <MudText Typo="Typo.h5" Class="ml-5 nav-header" >Demo Dashboard</MudText>
-        <MudSpacer />
+        <MudTextField T="string" Variant="Variant.Outlined" Label="Search"></MudTextField>
+        @* <MudSpacer /> *@
         <MudIconButton Icon="@Icons.Material.Filled.Notifications"></MudIconButton>
         <MudToggleIconButton @bind-Toggled="@_isDarkMode" 
             Icon="@Icons.Material.Filled.DarkMode" Color="@MudBlazor.Color.Default" 
@@ -46,14 +48,14 @@
         </MudDrawerContainer>
     </MudDrawer>
     @* <MudMainContent Class="custom-gradient "> *@
-    <MudMainContent Class="alis-gradient ">
+    <MudMainContent Class="alis-background ">
         @Body
     </MudMainContent>
 </MudLayout>
 
 @code {
     bool _drawerOpen = true;
-    private bool _isDarkMode;
+    private bool _isDarkMode = true;
     private MudTheme _theme = new();
 
     void DrawerToggle()
@@ -71,6 +73,9 @@
                 TertiaryLighten = Colors.Orange.Accent2,
                 // AppbarBackground = "rgba(0,98,138,1)",
                 // DrawerBackground = "rgba(16,110,149,1)",
+                Background = Colors.Gray.Darken1,
+                AppbarBackground = Colors.Gray.Darken3,
+                DrawerBackground = Colors.Gray.Darken4
                 
             },
             PaletteDark = new PaletteDark()

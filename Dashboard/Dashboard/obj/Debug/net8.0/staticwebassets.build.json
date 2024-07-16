@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UGbJCSPv8Gg36wX/Wwa9tUI6cG4WiYokzPUgDHZVEcs=",
+  "Hash": "gnWfCWg5Wdf+wj5ranM76yr1yNr3zVE+3hox4Ai/dXU=",
   "Source": "Dashboard",
   "BasePath": "_content/Dashboard",
   "Mode": "Default",
@@ -243,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Adam_Smith_The_Muir_portrait.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\images\\alis-bg-header3.jpg",
+      "SourceId": "Dashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\",
+      "BasePath": "_content/Dashboard",
+      "RelativePath": "images/alis-bg-header3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\alis-bg-header3.jpg"
     },
     {
       "Identity": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\images\\randomLogo.jpg",

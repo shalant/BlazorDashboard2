@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\Adam_Smith_The_Muir_portrait.jpg"
     },
     {
+      "Id": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\images\\alis-bg-header3.jpg",
+      "PackagePath": "staticwebassets\\images\\alis-bg-header3.jpg"
+    },
+    {
       "Id": "C:\\Users\\digdr\\Documents\\coding\\BlazorDashboard2\\Dashboard\\Dashboard\\wwwroot\\images\\randomLogo.jpg",
       "PackagePath": "staticwebassets\\images\\randomLogo.jpg"
     },

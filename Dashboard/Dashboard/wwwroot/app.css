@@ -55,7 +55,7 @@ h1:focus {
 }
 
 .custom-card {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .custom-card:hover {
@@ -135,4 +135,10 @@ path:hover {
     background-color: black;
     /*background-color: #2d3436;
     background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);*/
+}
+
+.alis-background {
+    background-image: url('images/alis-bg-header3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

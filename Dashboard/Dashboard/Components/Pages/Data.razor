@@ -8,7 +8,7 @@
 @* <MudContainer Class="glassy-background"> *@
 <MudContainer Class="">
     <MudText Typo="Typo.h4" Align="MudBlazor.Align.Center" Class="mt-5">Ai Usage Data</MudText>
-    <MudButton Variant="Variant.Filled" Class="mt-3 align-items-center" OnClick="FetchStateData">Fetch State Names</MudButton>
+    <MudButton Variant="Variant.Filled" Class="mt-3 align-items-center" OnClick="FetchStateData">State Names/Population</MudButton>
     <MudButton Variant="Variant.Filled" Class="mt-3 align-items-center" OnClick="FetchAiUsage">Fetch Ai Usage</MudButton>
     <EditForm Model="@model">
         <MudSelect T="string" Label="Select a data set" AnchorOrigin="Origin.BottomCenter">
@@ -16,7 +16,6 @@
         <MudSelectItem Value="@("Fetch AI Usage")">AI Usage</MudSelectItem>
     </MudSelect>
         <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="MudBlazor.Color.Primary" Class="ml-auto">Submit</MudButton>
-
     </EditForm>
     @if (StateData.Count > 0)
     {
@@ -289,252 +288,252 @@
                     </g>
                     <g>
                         <text id="AL" text-anchor="middle" alignment-baseline="central" x="573.3266476560973" y="226.77993569627182"
-                              data-code="US-AL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-AL" font-family="" font-size="10" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Alabama").FirstOrDefault().name @StateData.Where(x => x.name == "Alabama").FirstOrDefault().population.total
                         </text>
-                        <text id="AK" text-anchor="middle" alignment-baseline="central" x="290.6416510701941" y="294.5774170573097"
-                              data-code="US-AK" font-family="" font-size="10" font-weight="bold" cursor="default"
+                        <text id="AK" text-anchor="middle" alignment-baseline="central" x="290.641659701941" y="294.5774170573097"
+                              data-code="US-AK" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Alaska").FirstOrDefault().name @StateData.Where(x => x.name == "Alaska").FirstOrDefault().population.total
                         </text>
                         <text id="AR" text-anchor="middle" alignment-baseline="central" x="510.34676287847054" y="205.49081438768047"
-                              data-code="US-AR" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-AR" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Arkansas").FirstOrDefault().name @StateData.Where(x => x.name == "Arkansas").FirstOrDefault().population.total
                         </text>
                         <text id="AZ" text-anchor="middle" alignment-baseline="central" x="304.1446797766049" y="209.05023914082355"
-                              data-code="US-AZ" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-AZ" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Arizona").FirstOrDefault().name @StateData.Where(x => x.name == "Arizona").FirstOrDefault().population.total
                         </text>
                         <text id="CA" text-anchor="middle" alignment-baseline="central" x="232.4410202692685" y="160.56978343493907"
-                              data-code="US-CA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-CA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "California").FirstOrDefault().name @StateData.Where(x => x.name == "California").FirstOrDefault().population.total
                         </text>
                         <text id="CO" text-anchor="middle" alignment-baseline="central" x="373.8261313916834" y="151.84307258410917"
-                              data-code="US-CO" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-CO" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Colorado").FirstOrDefault().name @StateData.Where(x => x.name == "Colorado").FirstOrDefault().population.total
                         </text>
                         <text id="CT" text-anchor="middle" alignment-baseline="central" x="686.6651593107077" y="84.21914206308723"
-                              data-code="US-CT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-CT" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Connecticut").FirstOrDefault().name @StateData.Where(x => x.name == "Connecticut").FirstOrDefault().population.total
                         </text>
                         <text id="DE" text-anchor="middle" alignment-baseline="central" x="686.6651593107077" y="84.21914206308723"
-                              data-code="US-DE" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-DE" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Delaware").FirstOrDefault().name @StateData.Where(x => x.name == "Delaware").FirstOrDefault().population.total
                         </text>
                         <text id="FL" text-anchor="middle" alignment-baseline="central" x="639.2282466525139" y="276.03930260571553"
-                              data-code="US-FL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-FL" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Florida").FirstOrDefault().name @StateData.Where(x => x.name == "Florida").FirstOrDefault().population.total
                         </text>
                         <text id="GA" text-anchor="middle" alignment-baseline="central" x="607.8573087599908" y="219.2025147824443"
-                              data-code="US-GA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-GA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Georgia").FirstOrDefault().name @StateData.Where(x => x.name == "Georgia").FirstOrDefault().population.total
                         </text>
                         <text id="HI" text-anchor="middle" alignment-baseline="central" x="377.48851337769156" y="344.34514763772336"
-                              data-code="US-HI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-HI" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Hawaii").FirstOrDefault().name @StateData.Where(x => x.name == "Hawaii").FirstOrDefault().population.total
                         </text>
                         <text id="IA" text-anchor="middle" alignment-baseline="central" x="492.0821046523155" y="110.145183687327"
-                              data-code="US-IA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-IA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Iowa").FirstOrDefault().name @StateData.Where(x => x.name == "Iowa").FirstOrDefault().population.total
                         </text>
                         <text id="ID" text-anchor="middle" alignment-baseline="central" x="298.8804216537425" y="84.14856191090055"
-                              data-code="US-ID" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-ID" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Idaho").FirstOrDefault().name @StateData.Where(x => x.name == "Idaho").FirstOrDefault().population.total
                         </text>
                         <text id="IL" text-anchor="middle" alignment-baseline="central" x="532.6999101427759" y="137.68456488801866"
-                              data-code="US-IL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-IL" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Illinois").FirstOrDefault().name @StateData.Where(x => x.name == "Illinois").FirstOrDefault().population.total
                         </text>
                         <text id="IN" text-anchor="middle" alignment-baseline="central" x="564.0327256934556" y="134.42197862839245"
-                              data-code="US-IN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-IN" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Indiana").FirstOrDefault().name @StateData.Where(x => x.name == "Indiana").FirstOrDefault().population.total
                         </text>
                         <text id="KS" text-anchor="middle" alignment-baseline="central" x="446.6173480103922" y="159.9378719815273"
-                              data-code="US-KS" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-KS" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Kansas").FirstOrDefault().name @StateData.Where(x => x.name == "Kansas").FirstOrDefault().population.total
                         </text>
                         <text id="KY" text-anchor="middle" alignment-baseline="central" x="579.9342810432474" y="163.2102941070505"
-                              data-code="US-KY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-KY" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Kentucky").FirstOrDefault().name @StateData.Where(x => x.name == "Kentucky").FirstOrDefault().population.total
                         </text>
                         <text id="LA" text-anchor="middle" alignment-baseline="central" x="511.2932105619772" y="252.04309137793032"
-                              data-code="US-LA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-LA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Louisiana").FirstOrDefault().name @StateData.Where(x => x.name == "Louisiana").FirstOrDefault().population.total
                         </text>
                         <text id="MA" text-anchor="middle" alignment-baseline="central" x="694.3484168174548" y="70.85715136499542"
-                              data-code="US-MA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-MA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Massachusetts").FirstOrDefault().name @StateData.Where(x => x.name == "Massachusetts").FirstOrDefault().population.total
                         </text>
                         <text id="MD" text-anchor="middle" alignment-baseline="central" x="694.3484168174548" y="70.85715136499542"
-                              data-code="US-MD" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-MD" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Maryland").FirstOrDefault().name @StateData.Where(x => x.name == "Maryland").FirstOrDefault().population.total
                         </text>
                         <text id="ME" text-anchor="middle" alignment-baseline="central" x="705.6704473661556" y="29.636743136606384"
-                              data-code="US-ME" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-ME" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Maine").FirstOrDefault().name @StateData.Where(x => x.name == "Maine").FirstOrDefault().population.total
                         </text>
                         <text id="MI" text-anchor="middle" alignment-baseline="central" x="571.4895454576169" y="91.19698599685813"
-                              data-code="US-MI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-MI" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Michigan").FirstOrDefault().name @StateData.Where(x => x.name == "Michigan").FirstOrDefault().population.total
                         </text>
                         <text id="MN" text-anchor="middle" alignment-baseline="central" x="486.2417101022323" y="57.28357494220166"
-                              data-code="US-MN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-MN" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Minnesota").FirstOrDefault().name @StateData.Where(x => x.name == "Minnesota").FirstOrDefault().population.total
                         </text>
                         <text id="MO" text-anchor="middle" alignment-baseline="central" x="505.39709256298903" y="158.8062035364393"
-                              data-code="US-MO" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-MO" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Missouri").FirstOrDefault().name @StateData.Where(x => x.name == "Missouri").FirstOrDefault().population.total
                         </text>
                         <text id="MS" text-anchor="middle" alignment-baseline="central" x="539.3603407308881" y="230.02197625613525"
-                              data-code="US-MS" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-MS" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Mississippi").FirstOrDefault().name @StateData.Where(x => x.name == "Mississippi").FirstOrDefault().population.total
                         </text>
                         <text id="MT" text-anchor="middle" alignment-baseline="central" x="343.0518978486346" y="45.294262134330666"
-                              data-code="US-MT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-MT" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Montana").FirstOrDefault().name @StateData.Where(x => x.name == "Montana").FirstOrDefault().population.total
                         </text>
                         <text id="NC" text-anchor="middle" alignment-baseline="central" x="635.3109655356993" y="174.99576645138438"
-                              data-code="US-NC" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-NC" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "North Carolina").FirstOrDefault().name @StateData.Where(x => x.name == "North Carolina").FirstOrDefault().population.total
                         </text>
                         <text id="ND" text-anchor="middle" alignment-baseline="central" x="426.93010059616444" y="44.362502764887104"
-                              data-code="US-ND" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-ND" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" [attr.fill]="this.getColorForState('ND')" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "North Dakota").FirstOrDefault().name @StateData.Where(x => x.name == "North Dakota").FirstOrDefault().population.total
                         </text>
                         <text id="NE" text-anchor="middle" alignment-baseline="central" x="432.608723907465" y="121.18054647264377"
-                              data-code="US-NE" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-NE" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Nebraska").FirstOrDefault().name @StateData.Where(x => x.name == "Nebraska").FirstOrDefault().population.total
                         </text>
                         <text id="NH" text-anchor="middle" alignment-baseline="central" x="690.6273533348965" y="50.90827704616977"
-                              data-code="US-NH" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-NH" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "New Hampshire").FirstOrDefault().name @StateData.Where(x => x.name == "New Hampshire").FirstOrDefault().population.total
                         </text>
                         <text id="NJ" text-anchor="middle" alignment-baseline="central" x="673.0004615229459" y="106.92502414401436"
-                              data-code="US-NJ" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-NJ" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "New Jersey").FirstOrDefault().name @StateData.Where(x => x.name == "New Jersey").FirstOrDefault().population.total
                         </text>
                         <text id="NM" text-anchor="middle" alignment-baseline="central" x="364.95245667057725" y="212.5949800648849"
-                              data-code="US-NM" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-NM" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "New Mexico").FirstOrDefault().name @StateData.Where(x => x.name == "New Mexico").FirstOrDefault().population.total
                         </text>
                         <text id="NV" text-anchor="middle" alignment-baseline="central" x="265.0023320700491" y="144.48607056585772"
-                              data-code="US-NV" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-NV" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Nevada").FirstOrDefault().name @StateData.Where(x => x.name == "Nevada").FirstOrDefault().population.total
                         </text>
                         <text id="NY" text-anchor="middle" alignment-baseline="central" x="656.9402992911608" y="70.98061169030002"
-                              data-code="US-NY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-NY" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "New York").FirstOrDefault().name @StateData.Where(x => x.name == "New York").FirstOrDefault().population.total
                         </text>
                         <text id="OH" text-anchor="middle" alignment-baseline="central" x="595.3418067226021" y="121.13938779839727"
-                              data-code="US-OH" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-OH" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Ohio").FirstOrDefault().name @StateData.Where(x => x.name == "Ohio").FirstOrDefault().population.total
                         </text>
                         <text id="OK" text-anchor="middle" alignment-baseline="central" x="458.27450533876464" y="200.2206562717951"
-                              data-code="US-OK" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-OK" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Oklahoma").FirstOrDefault().name @StateData.Where(x => x.name == "Oklahoma").FirstOrDefault().population.total
                         </text>
                         <text id="OR" text-anchor="middle" alignment-baseline="central" x="241.808500832209" y="67.36825294426228"
-                              data-code="US-OR" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-OR" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Oregon").FirstOrDefault().name @StateData.Where(x => x.name == "Oregon").FirstOrDefault().population.total
                         </text>
                         <text id="PA" text-anchor="middle" alignment-baseline="central" x="643.0522314880861" y="105.03802204255182"
-                              data-code="US-PA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-PA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Pennsylvania").FirstOrDefault().name @StateData.Where(x => x.name == "Pennsylvania").FirstOrDefault().population.total
                         </text>
                         <text id="RI" text-anchor="middle" alignment-baseline="central" x="643.0522314880861" y="105.03802204255182"
-                              data-code="US-RI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-RI" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Rhode Island").FirstOrDefault().name @StateData.Where(x => x.name == "Rhode Island").FirstOrDefault().population.total
                         </text>
                         <text id="SC" text-anchor="middle" alignment-baseline="central" x="628.9437896392692" y="203.97999458556401"
-                              data-code="US-SC" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-SC" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "South Carolina").FirstOrDefault().name @StateData.Where(x => x.name == "South Carolina").FirstOrDefault().population.total
                         </text>
                         <text id="SD" text-anchor="middle" alignment-baseline="central" x="427.2504269372381" y="85.60644099265026"
-                              data-code="US-SD" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-SD" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "South Dakota").FirstOrDefault().name @StateData.Where(x => x.name == "South Dakota").FirstOrDefault().population.total
                         </text>
                         <text id="TN" text-anchor="middle" alignment-baseline="central" x="573.5146760160309" y="183.89592498761812"
-                              data-code="US-TN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-TN" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Tennessee").FirstOrDefault().name @StateData.Where(x => x.name == "Tennessee").FirstOrDefault().population.total
                         </text>
                         <text id="TX" text-anchor="middle" alignment-baseline="central" x="429.09048922343817" y="254.62679945899393"
-                              data-code="US-TX" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-TX" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Texas").FirstOrDefault().name @StateData.Where(x => x.name == "Texas").FirstOrDefault().population.total
                         </text>
                         <text id="UT" text-anchor="middle" alignment-baseline="central" x="315.0258949591005" y="140.43867086715866"
-                              data-code="US-UT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-UT" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Utah").FirstOrDefault().name @StateData.Where(x => x.name == "Utah").FirstOrDefault().population.total
                         </text>
                         <text id="VA" text-anchor="middle" alignment-baseline="central" x="643.801707758761" y="150.28819232480475"
-                              data-code="US-VA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-VA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Virginia").FirstOrDefault().name @StateData.Where(x => x.name == "Virginia").FirstOrDefault().population.total
                         </text>
                         <text id="VT" text-anchor="middle" alignment-baseline="central" x="677.1390408933710" y="54.08858632213555"
-                              data-code="US-VT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-VT" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Vermont").FirstOrDefault().name @StateData.Where(x => x.name == "Vermont").FirstOrDefault().population.total
                         </text>
                         <text id="WA" text-anchor="middle" alignment-baseline="central" x="251.2377044098627" y="26.106653981017573"
-                              data-code="US-WA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-WA" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Washington").FirstOrDefault().name @StateData.Where(x => x.name == "Washington").FirstOrDefault().population.total
                         </text>
                         <text id="WI" text-anchor="middle" alignment-baseline="central" x="519.0764203620558" y="75.62465967620588"
-                              data-code="US-WI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-WI" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Wisconsin").FirstOrDefault().name @StateData.Where(x => x.name == "Wisconsin").FirstOrDefault().population.total
                         </text>
                         <text id="WV" text-anchor="middle" alignment-baseline="central" x="624.7229198302393" y="136.4412338611812"
-                              data-code="US-WV" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-WV" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black" class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "West Virginia").FirstOrDefault().name @StateData.Where(x => x.name == "West Virginia").FirstOrDefault().population.total
                         </text>
                         <text id="WY" text-anchor="middle" alignment-baseline="central" x="358.17446106520196" y="98.8743524785451"
-                              data-code="US-WY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                              data-code="US-WY" font-family="" font-size="9" font-weight="normal" cursor="default"
                               fill="black"  class="jvectormap-region jvectormap-element">
                             @StateData.Where(x => x.name == "Wyoming").FirstOrDefault().name @StateData.Where(x => x.name == "Wyoming").FirstOrDefault().population.total
                         </text>
@@ -548,12 +547,10 @@
     else if (AiUsageList.Count > 0)
     {
         <MudPaper Elevation="2" Class="pa-4 mt-3" Style="height: 500px;">
-
             <MudText Typo="Typo.h3" Align="MudBlazor.Align.Center" Color="MudBlazor.Color.Dark">
                 AI Usage Per State
             </MudText>
             <MudItem xs="12">
-                <MudPaper Elevation="2" Class="pa-4" Style="height: 500px;">
                     <MudText Typo="Typo.h6" Align="MudBlazor.Align.Center" Color="MudBlazor.Color.Dark">AI Usage by State</MudText>
                     <svg id="colorChangeMap" viewBox="150 0 560 400">
                         <g transform="scale(0.58785548118519790) translate(332.1650298692115, 0)">
@@ -816,298 +813,298 @@
                         </g>
                         <g>
                             <text id="AL" text-anchor="middle" alignment-baseline="central" x="573.3266476560973" y="226.77993569627182"
-                                  data-code="US-AL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-AL" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Alabama").FirstOrDefault().Usage
                             </text>
                             <text id="AK" text-anchor="middle" alignment-baseline="central" x="290.6416510701941" y="294.5774170573097"
-                                  data-code="US-AK" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-AK" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Alaska").FirstOrDefault().Usage
                             </text>
                             <text id="AR" text-anchor="middle" alignment-baseline="central" x="510.34676287847054" y="205.49081438768047"
-                                  data-code="US-AR" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-AR" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Arkansas").FirstOrDefault().Usage
 
                             </text>
                             <text id="AZ" text-anchor="middle" alignment-baseline="central" x="304.1446797766049" y="209.05023914082355"
-                                  data-code="US-AZ" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-AZ" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Arizona").FirstOrDefault().Usage
 
                             </text>
                             <text id="CA" text-anchor="middle" alignment-baseline="central" x="232.4410202692685" y="160.56978343493907"
-                                  data-code="US-CA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-CA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "California").FirstOrDefault().Usage
                             </text>
                             <text id="CO" text-anchor="middle" alignment-baseline="central" x="373.8261313916834" y="151.84307258410917"
-                                  data-code="US-CO" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-CO" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Colorado").FirstOrDefault().Usage
 
                             </text>
                             <text id="CT" text-anchor="middle" alignment-baseline="central" x="686.6651593107077" y="84.21914206308723"
-                                  data-code="US-CT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-CT" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Connecticut").FirstOrDefault().Usage
 
                             </text>
                             <text id="DE" text-anchor="middle" alignment-baseline="central" x="686.6651593107077" y="84.21914206308723"
-                                  data-code="US-DE" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-DE" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Delaware").FirstOrDefault().Usage
 
                             </text>
                             <text id="FL" text-anchor="middle" alignment-baseline="central" x="639.2282466525139" y="276.03930260571553"
-                                  data-code="US-FL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-FL" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Florida").FirstOrDefault().Usage
 
                             </text>
                             <text id="GA" text-anchor="middle" alignment-baseline="central" x="607.8573087599908" y="219.2025147824443"
-                                  data-code="US-GA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-GA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Georgia").FirstOrDefault().Usage
 
                             </text>
                             <text id="HI" text-anchor="middle" alignment-baseline="central" x="377.48851337769156" y="344.34514763772336"
-                                  data-code="US-HI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-HI" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Hawaii").FirstOrDefault().Usage
 
                             </text>
                             <text id="IA" text-anchor="middle" alignment-baseline="central" x="492.0821046523155" y="110.145183687327"
-                                  data-code="US-IA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-IA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Iowa").FirstOrDefault().Usage
 
                             </text>
                             <text id="ID" text-anchor="middle" alignment-baseline="central" x="298.8804216537425" y="84.14856191090055"
-                                  data-code="US-ID" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-ID" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Idaho").FirstOrDefault().Usage
 
                             </text>
                             <text id="IL" text-anchor="middle" alignment-baseline="central" x="532.6999101427759" y="137.68456488801866"
-                                  data-code="US-IL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-IL" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Illinois").FirstOrDefault().Usage
 
                             </text>
                             <text id="IN" text-anchor="middle" alignment-baseline="central" x="564.0327256934556" y="134.42197862839245"
-                                  data-code="US-IN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-IN" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Indiana").FirstOrDefault().Usage
 
                             </text>
                             <text id="KS" text-anchor="middle" alignment-baseline="central" x="446.6173480103922" y="159.9378719815273"
-                                  data-code="US-KS" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-KS" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Kansas").FirstOrDefault().Usage
 
                             </text>
                             <text id="KY" text-anchor="middle" alignment-baseline="central" x="579.9342810432474" y="163.2102941070505"
-                                  data-code="US-KY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-KY" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Kentucky").FirstOrDefault().Usage
 
                             </text>
                             <text id="LA" text-anchor="middle" alignment-baseline="central" x="511.2932105619772" y="252.04309137793032"
-                                  data-code="US-LA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-LA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Louisiana").FirstOrDefault().Usage
 
                             </text>
                             <text id="MA" text-anchor="middle" alignment-baseline="central" x="694.3484168174548" y="70.85715136499542"
-                                  data-code="US-MA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-MA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Massachusetts").FirstOrDefault().Usage
 
                             </text>
                             <text id="MD" text-anchor="middle" alignment-baseline="central" x="694.3484168174548" y="70.85715136499542"
-                                  data-code="US-MD" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-MD" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Maryland").FirstOrDefault().Usage
 
                             </text>
                             <text id="ME" text-anchor="middle" alignment-baseline="central" x="705.6704473661556" y="29.636743136606384"
-                                  data-code="US-ME" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-ME" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Maine").FirstOrDefault().Usage
 
                             </text>
                             <text id="MI" text-anchor="middle" alignment-baseline="central" x="571.4895454576169" y="91.19698599685813"
-                                  data-code="US-MI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-MI" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Michigan").FirstOrDefault().Usage
 
                             </text>
                             <text id="MN" text-anchor="middle" alignment-baseline="central" x="486.2417101022323" y="57.28357494220166"
-                                  data-code="US-MN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-MN" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Minnesota").FirstOrDefault().Usage
 
                             </text>
                             <text id="MO" text-anchor="middle" alignment-baseline="central" x="505.39709256298903" y="158.8062035364393"
-                                  data-code="US-MO" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-MO" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Missouri").FirstOrDefault().Usage
 
                             </text>
                             <text id="MS" text-anchor="middle" alignment-baseline="central" x="539.3603407308881" y="230.02197625613525"
-                                  data-code="US-MS" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-MS" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Mississippi").FirstOrDefault().Usage
 
                             </text>
                             <text id="MT" text-anchor="middle" alignment-baseline="central" x="343.0518978486346" y="45.294262134330666"
-                                  data-code="US-MT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-MT" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Montana").FirstOrDefault().Usage
 
                             </text>
                             <text id="NC" text-anchor="middle" alignment-baseline="central" x="635.3109655356993" y="174.99576645138438"
-                                  data-code="US-NC" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-NC" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "North Carolina").FirstOrDefault().Usage
 
                             </text>
                             <text id="ND" text-anchor="middle" alignment-baseline="central" x="426.93010059616444" y="44.362502764887104"
-                                  data-code="US-ND" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-ND" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "North Dakota").FirstOrDefault().Usage
 
                             </text>
                             <text id="NE" text-anchor="middle" alignment-baseline="central" x="432.608723907465" y="121.18054647264377"
-                                  data-code="US-NE" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-NE" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Nebraska").FirstOrDefault().Usage
 
                             </text>
                             <text id="NH" text-anchor="middle" alignment-baseline="central" x="690.6273533348965" y="50.90827704616977"
-                                  data-code="US-NH" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-NH" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "New Hampshire").FirstOrDefault().Usage
 
                             </text>
                             <text id="NJ" text-anchor="middle" alignment-baseline="central" x="673.0004615229459" y="106.92502414401436"
-                                  data-code="US-NJ" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-NJ" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "New Jersey").FirstOrDefault().Usage
 
                             </text>
                             <text id="NM" text-anchor="middle" alignment-baseline="central" x="364.95245667057725" y="212.5949800648849"
-                                  data-code="US-NM" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-NM" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "New Mexico").FirstOrDefault().Usage
 
                             </text>
                             <text id="NV" text-anchor="middle" alignment-baseline="central" x="265.0023320700491" y="144.48607056585772"
-                                  data-code="US-NV" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-NV" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Nevada").FirstOrDefault().Usage
 
                             </text>
                             <text id="NY" text-anchor="middle" alignment-baseline="central" x="656.9402992911608" y="70.98061169030002"
-                                  data-code="US-NY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-NY" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "New York").FirstOrDefault().Usage
 
                             </text>
                             <text id="OH" text-anchor="middle" alignment-baseline="central" x="595.3418067226021" y="121.13938779839727"
-                                  data-code="US-OH" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-OH" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Ohio").FirstOrDefault().Usage
 
                             </text>
                             <text id="OK" text-anchor="middle" alignment-baseline="central" x="458.27450533876464" y="200.2206562717951"
-                                  data-code="US-OK" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-OK" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Oklahoma").FirstOrDefault().Usage
 
                             </text>
                             <text id="OR" text-anchor="middle" alignment-baseline="central" x="241.808500832209" y="67.36825294426228"
-                                  data-code="US-OR" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-OR" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Oregon").FirstOrDefault().Usage
 
                             </text>
                             <text id="PA" text-anchor="middle" alignment-baseline="central" x="643.0522314880861" y="105.03802204255182"
-                                  data-code="US-PA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-PA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Pennsylvania").FirstOrDefault().Usage
 
                             </text>
                             <text id="RI" text-anchor="middle" alignment-baseline="central" x="643.0522314880861" y="105.03802204255182"
-                                  data-code="US-RI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-RI" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Rhode Island").FirstOrDefault().Usage
 
                             </text>
                             <text id="SC" text-anchor="middle" alignment-baseline="central" x="628.9437896392692" y="203.97999458556401"
-                                  data-code="US-SC" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-SC" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "South Carolina").FirstOrDefault().Usage
 
                             </text>
                             <text id="SD" text-anchor="middle" alignment-baseline="central" x="427.2504269372381" y="85.60644099265026"
-                                  data-code="US-SD" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-SD" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "South Dakota").FirstOrDefault().Usage
 
                             </text>
                             <text id="TN" text-anchor="middle" alignment-baseline="central" x="573.5146760160309" y="183.89592498761812"
-                                  data-code="US-TN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-TN" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Tennessee").FirstOrDefault().Usage
 
                             </text>
                             <text id="TX" text-anchor="middle" alignment-baseline="central" x="429.09048922343817" y="254.62679945899393"
-                                  data-code="US-TX" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-TX" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Texas").FirstOrDefault().Usage
 
                             </text>
                             <text id="UT" text-anchor="middle" alignment-baseline="central" x="315.0258949591005" y="140.43867086715866"
-                                  data-code="US-UT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-UT" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Utah").FirstOrDefault().Usage
 
                             </text>
                             <text id="VA" text-anchor="middle" alignment-baseline="central" x="643.801707758761" y="150.28819232480475"
-                                  data-code="US-VA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-VA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Virginia").FirstOrDefault().Usage
 
                             </text>
                             <text id="VT" text-anchor="middle" alignment-baseline="central" x="677.1390408933710" y="54.08858632213555"
-                                  data-code="US-VT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-VT" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Vermont").FirstOrDefault().Usage
 
                             </text>
                             <text id="WA" text-anchor="middle" alignment-baseline="central" x="251.2377044098627" y="26.106653981017573"
-                                  data-code="US-WA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-WA" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Washington").FirstOrDefault().Usage
 
                             </text>
                             <text id="WI" text-anchor="middle" alignment-baseline="central" x="519.0764203620558" y="75.62465967620588"
-                                  data-code="US-WI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-WI" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Wisconsin").FirstOrDefault().Usage
 
                             </text>
                             <text id="WV" text-anchor="middle" alignment-baseline="central" x="624.7229198302393" y="136.4412338611812"
-                                  data-code="US-WV" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-WV" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "West Virginia").FirstOrDefault().Usage
 
                             </text>
                             <text id="WY" text-anchor="middle" alignment-baseline="central" x="358.17446106520196" y="98.8743524785451"
-                                  data-code="US-WY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                                  data-code="US-WY" font-family="" font-size="10" font-weight="normal" cursor="default"
                                   fill="black" class="jvectormap-region jvectormap-element">
                                 @AiUsageList.Where(x => x.StateName == "Wyoming").FirstOrDefault().Usage
 
@@ -1116,14 +1113,12 @@
                         <g></g>
                         <g></g>
                     </svg>
-                </MudPaper>
             </MudItem>
         </MudPaper>
     }
     else
     {
         <MudPaper Elevation="2" Class="pa-4 mt-3 glassy-foreground" Style="height: 500px;">
-
             <svg id="colorChangeMap" viewBox="150 0 560 400">
                 <g transform="scale(0.58785548118519790) translate(332.1650298692115, 0)">
                     <!-- <g transform="scale(1) translate(565, 0)"> -->
@@ -1385,206 +1380,206 @@
                 </g>
                 <g>
                     <text id="AL" text-anchor="middle" alignment-baseline="central" x="573.3266476560973" y="226.77993569627182"
-                          data-code="US-AL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-AL" font-family="" font-size="10" font-weight="normal" cursor="default"
                           fill="blue" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="AK" text-anchor="middle" alignment-baseline="central" x="290.6416510701941" y="294.5774170573097"
-                          data-code="US-AK" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-AK" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('AK')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="AR" text-anchor="middle" alignment-baseline="central" x="510.34676287847054" y="205.49081438768047"
-                          data-code="US-AR" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-AR" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('AR')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="AZ" text-anchor="middle" alignment-baseline="central" x="304.1446797766049" y="209.05023914082355"
-                          data-code="US-AZ" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-AZ" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('AZ')" class="jvectormap-region jvectormap-element">
                         <!-- {{fiveYearArray[0].state_alpha}} {{fiveYearArray[0].value}}</text> -->
                         <!-- {{(this.getDataForState("AZ")?.state_alpha ? this.getDataForState("AZ")?.state_alpha : "AZ- N/A")}} {{this.getDataForState("AZ")?.value}}</text> -->
                     </text>
                     <text id="CA" text-anchor="middle" alignment-baseline="central" x="232.4410202692685" y="160.56978343493907"
-                          data-code="US-CA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-CA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('CA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="CO" text-anchor="middle" alignment-baseline="central" x="373.8261313916834" y="151.84307258410917"
-                          data-code="US-CO" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-CO" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('CO')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="CT" text-anchor="middle" alignment-baseline="central" x="686.6651593107077" y="84.21914206308723"
-                          data-code="US-CT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-CT" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('CT')" class="jvectormap-region jvectormap-element">
                         <!-- {{this.getDataForState("CO")?.state_alpha}} {{this.getDataForState("CO")?.value}}</text> -->
                     </text>
                     <text id="DE" text-anchor="middle" alignment-baseline="central" x="686.6651593107077" y="84.21914206308723"
-                          data-code="US-DE" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-DE" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('DE')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="FL" text-anchor="middle" alignment-baseline="central" x="639.2282466525139" y="276.03930260571553"
-                          data-code="US-FL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-FL" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('FL')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="GA" text-anchor="middle" alignment-baseline="central" x="607.8573087599908" y="219.2025147824443"
-                          data-code="US-GA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-GA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('GA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="HI" text-anchor="middle" alignment-baseline="central" x="377.48851337769156" y="344.34514763772336"
-                          data-code="US-HI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-HI" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('HI')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="IA" text-anchor="middle" alignment-baseline="central" x="492.0821046523155" y="110.145183687327"
-                          data-code="US-IA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-IA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('IA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="ID" text-anchor="middle" alignment-baseline="central" x="298.8804216537425" y="84.14856191090055"
-                          data-code="US-ID" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-ID" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('ID')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="IL" text-anchor="middle" alignment-baseline="central" x="532.6999101427759" y="137.68456488801866"
-                          data-code="US-IL" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-IL" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('IL')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="IN" text-anchor="middle" alignment-baseline="central" x="564.0327256934556" y="134.42197862839245"
-                          data-code="US-IN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-IN" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('IN')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="KS" text-anchor="middle" alignment-baseline="central" x="446.6173480103922" y="159.9378719815273"
-                          data-code="US-KS" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-KS" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('KS')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="KY" text-anchor="middle" alignment-baseline="central" x="579.9342810432474" y="163.2102941070505"
-                          data-code="US-KY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-KY" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('KY')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="LA" text-anchor="middle" alignment-baseline="central" x="511.2932105619772" y="252.04309137793032"
-                          data-code="US-LA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-LA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('LA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="MA" text-anchor="middle" alignment-baseline="central" x="694.3484168174548" y="70.85715136499542"
-                          data-code="US-MA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-MA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('MA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="MD" text-anchor="middle" alignment-baseline="central" x="694.3484168174548" y="70.85715136499542"
-                          data-code="US-MD" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-MD" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('MD')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="ME" text-anchor="middle" alignment-baseline="central" x="705.6704473661556" y="29.636743136606384"
-                          data-code="US-ME" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-ME" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('ME')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="MI" text-anchor="middle" alignment-baseline="central" x="571.4895454576169" y="91.19698599685813"
-                          data-code="US-MI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-MI" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('MI')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="MN" text-anchor="middle" alignment-baseline="central" x="486.2417101022323" y="57.28357494220166"
-                          data-code="US-MN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-MN" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('MN')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="MO" text-anchor="middle" alignment-baseline="central" x="505.39709256298903" y="158.8062035364393"
-                          data-code="US-MO" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-MO" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('MO')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="MS" text-anchor="middle" alignment-baseline="central" x="539.3603407308881" y="230.02197625613525"
-                          data-code="US-MS" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-MS" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('MS')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="MT" text-anchor="middle" alignment-baseline="central" x="343.0518978486346" y="45.294262134330666"
-                          data-code="US-MT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-MT" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('MT')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="NC" text-anchor="middle" alignment-baseline="central" x="635.3109655356993" y="174.99576645138438"
-                          data-code="US-NC" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-NC" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('NC')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="ND" text-anchor="middle" alignment-baseline="central" x="426.93010059616444" y="44.362502764887104"
-                          data-code="US-ND" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-ND" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('ND')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="NE" text-anchor="middle" alignment-baseline="central" x="432.608723907465" y="121.18054647264377"
-                          data-code="US-NE" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-NE" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('NE')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="NH" text-anchor="middle" alignment-baseline="central" x="690.6273533348965" y="50.90827704616977"
-                          data-code="US-NH" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-NH" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('NH')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="NJ" text-anchor="middle" alignment-baseline="central" x="673.0004615229459" y="106.92502414401436"
-                          data-code="US-NJ" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-NJ" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('NJ')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="NM" text-anchor="middle" alignment-baseline="central" x="364.95245667057725" y="212.5949800648849"
-                          data-code="US-NM" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-NM" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('NM')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="NV" text-anchor="middle" alignment-baseline="central" x="265.0023320700491" y="144.48607056585772"
-                          data-code="US-NV" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-NV" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('NV')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="NY" text-anchor="middle" alignment-baseline="central" x="656.9402992911608" y="70.98061169030002"
-                          data-code="US-NY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-NY" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('NY')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="OH" text-anchor="middle" alignment-baseline="central" x="595.3418067226021" y="121.13938779839727"
-                          data-code="US-OH" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-OH" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('OH')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="OK" text-anchor="middle" alignment-baseline="central" x="458.27450533876464" y="200.2206562717951"
-                          data-code="US-OK" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-OK" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('OK')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="OR" text-anchor="middle" alignment-baseline="central" x="241.808500832209" y="67.36825294426228"
-                          data-code="US-OR" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-OR" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('OR')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="PA" text-anchor="middle" alignment-baseline="central" x="643.0522314880861" y="105.03802204255182"
-                          data-code="US-PA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-PA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('PA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="RI" text-anchor="middle" alignment-baseline="central" x="643.0522314880861" y="105.03802204255182"
-                          data-code="US-RI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-RI" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('RI')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="SC" text-anchor="middle" alignment-baseline="central" x="628.9437896392692" y="203.97999458556401"
-                          data-code="US-SC" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-SC" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('SC')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="SD" text-anchor="middle" alignment-baseline="central" x="427.2504269372381" y="85.60644099265026"
-                          data-code="US-SD" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-SD" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('SD')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="TN" text-anchor="middle" alignment-baseline="central" x="573.5146760160309" y="183.89592498761812"
-                          data-code="US-TN" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-TN" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('TN')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="TX" text-anchor="middle" alignment-baseline="central" x="429.09048922343817" y="254.62679945899393"
-                          data-code="US-TX" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-TX" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('TX')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="UT" text-anchor="middle" alignment-baseline="central" x="315.0258949591005" y="140.43867086715866"
-                          data-code="US-UT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-UT" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('UT')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="VA" text-anchor="middle" alignment-baseline="central" x="643.801707758761" y="150.28819232480475"
-                          data-code="US-VA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-VA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('VA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="VT" text-anchor="middle" alignment-baseline="central" x="677.1390408933710" y="54.08858632213555"
-                          data-code="US-VT" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-VT" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('VT')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="WA" text-anchor="middle" alignment-baseline="central" x="251.2377044098627" y="26.106653981017573"
-                          data-code="US-WA" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-WA" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('WA')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="WI" text-anchor="middle" alignment-baseline="central" x="519.0764203620558" y="75.62465967620588"
-                          data-code="US-WI" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-WI" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('WI')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="WV" text-anchor="middle" alignment-baseline="central" x="624.7229198302393" y="136.4412338611812"
-                          data-code="US-WV" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-WV" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('WV')" class="jvectormap-region jvectormap-element">
                     </text>
                     <text id="WY" text-anchor="middle" alignment-baseline="central" x="358.17446106520196" y="98.8743524785451"
-                          data-code="US-WY" font-family="" font-size="10" font-weight="bold" cursor="default"
+                          data-code="US-WY" font-family="" font-size="10" font-weight="normal" cursor="default"
                           [attr.fill]="this.getColorForState('WY')" class="jvectormap-region jvectormap-element">
                     </text>
                 </g>
