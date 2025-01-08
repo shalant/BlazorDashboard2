@@ -10,3 +10,5 @@ This is a demo dashboard that uses data from 2 separate APIs and a local DB. The
    b) shows AI Usage per state from a local DB
 4. Insert page allows for CRUD data from DB. The Ai Usage per state is 50% actual data from https://www.designnews.com/artificial-intelligence/which-states-depend-on-ai-the-least-and-most-
 5. Uses a SQL server DB
+
+<img src="/BlazorDashboard2Screenshot" alt="Homepage" title="Server">
