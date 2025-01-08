@@ -18,9 +18,9 @@
             @* <MudImage Src="images/reshot.svg" Width="65" Class="mt-1 ms-1" /> *@
             @* <MudText Typo="Typo.h6" Class="ms-3">SampleCorp</MudText> *@
         </MudButton>
-        <MudSpacer />
-        <MudText Typo="Typo.h5" Class="ml-5 nav-header" >Demo Dashboard</MudText>
-        <MudTextField T="string" Variant="Variant.Outlined" Label="Search"></MudTextField>
+        @* <MudSpacer /> *@
+        <MudText Typo="Typo.h5" Class="ml-5 me-3 nav-header" >Demo Dashboard</MudText>
+        <MudTextField T="string" Variant="Variant.Outlined" Label="Search" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" Class="custom-searchbox"></MudTextField>
         @* <MudSpacer /> *@
         <MudIconButton Icon="@Icons.Material.Filled.Notifications"></MudIconButton>
         <MudToggleIconButton @bind-Toggled="@_isDarkMode" 
@@ -73,9 +73,9 @@
                 TertiaryLighten = Colors.Orange.Accent2,
                 // AppbarBackground = "rgba(0,98,138,1)",
                 // DrawerBackground = "rgba(16,110,149,1)",
-                Background = Colors.Gray.Darken1,
+                // Background = Colors.Gray.Darken1,
                 AppbarBackground = Colors.Gray.Darken3,
-                DrawerBackground = Colors.Gray.Darken4
+                // DrawerBackground = Colors.Gray.Darken4
                 
             },
             PaletteDark = new PaletteDark()
@@ -84,8 +84,8 @@
                 Secondary = Colors.Green.Accent4,
                 Tertiary = Colors.Red.Accent4,
                 AppbarBackground = Colors.Gray.Darken3,
-                DrawerBackground = Colors.Gray.Darken1,
-                Background = Colors.Gray.Lighten1,
+                // DrawerBackground = Colors.Gray.Darken1,
+                // Background = Colors.Gray.Lighten1,
                 
             },
 

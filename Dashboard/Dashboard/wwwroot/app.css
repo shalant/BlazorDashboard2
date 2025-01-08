@@ -55,7 +55,7 @@ h1:focus {
 }
 
 .custom-card {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .custom-card:hover {
@@ -141,4 +141,10 @@ path:hover {
     background-image: url('images/alis-bg-header3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.custom-searchbox {
+    width: 20%;
+    margin: 4px 16px;
+    
 }
